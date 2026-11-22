@@ -14,6 +14,7 @@ chapitre.html     ?livre=<livre>&n=<n>     page d'un chapitre
 lecteur.html      ?livre=<livre>[&n=<n>][&page=<p>]   lecture en ligne (chapitre ou livre)
 404.html
 data/livres.js    données générées (ne pas modifier à la main)
+data/sujets.js    sujets d'entraînement par livre (maintenu à la main) ; PDF dans docs/sujets/<livre>/
 docs/<livre>.pdf  livres complets ; docs/<livre>/chapitre-NN.pdf : un PDF par chapitre
 assets/css/style.css
 assets/js/        app.js (commun), macros.js (macros LaTeX pour KaTeX), une page = un script

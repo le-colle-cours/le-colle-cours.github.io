@@ -2,11 +2,11 @@
    Pages, scripts et données : réseau d'abord (toujours à jour), cache si hors ligne.
    PDF : cache d'abord (lecture immédiate), mise à jour en arrière-plan. */
 'use strict';
-const APP = 'lc-app-v1';
+const APP = 'lc-app-v2';
 const DOCS = 'lc-docs-v1';
 const COQUILLE = [
   './', 'index.html', 'matiere.html', 'chapitre.html', 'lecteur.html', '404.html', 'manifest.webmanifest',
-  'data/livres.js', 'assets/css/style.css',
+  'data/livres.js', 'data/sujets.js', 'assets/css/style.css',
   'assets/js/app.js', 'assets/js/accueil.js', 'assets/js/matiere.js', 'assets/js/chapitre.js',
   'assets/js/lecteur.js', 'assets/js/macros.js',
   'assets/vendor/katex/katex.min.css', 'assets/vendor/katex/katex.min.js', 'assets/vendor/katex/contrib/auto-render.min.js',

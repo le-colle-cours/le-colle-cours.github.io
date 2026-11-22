@@ -51,7 +51,8 @@ if ('serviceWorker' in navigator && location.protocol !== 'file:') {
 }
 const CACHE_DOCS = 'lc-docs-v1';
 /* fichiers nécessaires pour lire hors ligne : livres complets (lecteur) et fiches */
-const fichiersHorsLigne = () => LC.livres.flatMap(l => [l.pdf, l.fiche].filter(Boolean));
+const sujetsDe = id => ((window.LC_SUJETS || {})[id] || []);
+const fichiersHorsLigne = () => LC.livres.flatMap(l => [l.pdf, l.fiche, ...sujetsDe(l.id).flatMap(s => [s.sujet, s.corrige])].filter(Boolean));
 const estInstallee = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
 
 async function etatHorsLigne() {

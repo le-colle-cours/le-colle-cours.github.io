@@ -12,6 +12,15 @@ const chapitres = l => {
     return `${tete}<li><span class="n">${c.n}</span><a href="${urlChapitre(l, c.n)}">${c.titre}</a><span class="tag">${c.fin - c.debut + 1} p.</span></li>`;
   }).join('');
 };
+const sujets = l => {
+  const s = sujetsDe(l.id);
+  if (!s.length) return '';
+  return `<div class="sujets"><h3>S'entraîner</h3>${s.map(x => `<div class="sujet">
+    <p><strong>${esc(x.titre)}</strong>${x.duree ? ` <span class="tag">${esc(x.duree)}</span>` : ''}</p>
+    <p>${esc(x.description)}</p>
+    <p class="links"><a class="dl" href="${x.sujet}" target="_blank" rel="noopener">Sujet (PDF)</a>${x.corrige ? `<a class="dl" href="${x.corrige}" target="_blank" rel="noopener">Corrigé (PDF)</a>` : ''}</p>
+  </div>`).join('')}</div>`;
+};
 $('#contenu').innerHTML = `
   <p class="kicker"><a href="index.html">Matières</a></p>
   <h1>${esc(M.titre)}</h1>
@@ -21,5 +30,6 @@ $('#contenu').innerHTML = `
     <p>${esc(l.description)}</p>
     <p class="links" style="margin-top:10px"><a href="${urlLecteur(l)}">Lire le livre complet</a>${lienPdf(l.pdf, 'Télécharger le PDF')}${l.fiche ? `<a class="dl" href="${l.fiche}" target="_blank" rel="noopener">Fiche de révision</a>` : ''}<span class="tag">${l.pages} pages</span></p>
     <ul class="chapitres formules">${chapitres(l)}</ul>
+    ${sujets(l)}
   </section>`).join('')}`;
 renderMath($('#contenu'));

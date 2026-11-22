@@ -158,3 +158,9 @@ body.reader { height: 100vh; height: 100dvh; overflow: hidden; display: flex; fl
 .hl-btn:disabled { opacity: .7; cursor: progress; }
 .hl-msg { color: var(--ocre); }
 .hl-aide { margin-top: .6rem; font-size: .85rem !important; color: var(--muted) !important; }
+
+/* sujets d'entraînement */
+.sujets { margin-top: 22px; padding: 14px 18px; border-left: 3px solid var(--ocre); background: var(--soft); }
+.sujets h3 { margin: 0 0 6px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--ocre); }
+.sujets .sujet + .sujet { margin-top: 12px; }
+.sujets p { margin: 4px 0; }
