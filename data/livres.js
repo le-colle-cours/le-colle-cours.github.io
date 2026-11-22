@@ -510,8 +510,8 @@ window.LC = {
    "id": "conception-systemes-logiques",
    "matiere": "numerique",
    "titre": "Conception des systèmes logiques",
-   "description": "Algèbre de Boole, codage, logique CMOS, circuits combinatoires et séquentiels, mémoires et composants programmables.",
-   "pages": 57,
+   "description": "Algèbre de Boole, codage, logique CMOS, circuits combinatoires et séquentiels, mémoires et composants programmables, et le cours appliqué au BE (armoire à vidéoprojecteurs).",
+   "pages": 67,
    "pdf": "docs/conception-systemes-logiques.pdf",
    "fiche": "docs/conception-systemes-logiques/fiche-revision.pdf",
    "chapitres": [
@@ -691,7 +691,7 @@ window.LC = {
      "prerequis": "Chapitres 1 à 3.",
      "essentiel": "<ul><li>Codeur : $2^{n-1}&lt;N\\le2^n$, une seule entrée active ; prioritaire : l'entrée de poids fort l'emporte.</li><li>Décodeur : chaque sortie est un minterme ; validation pour associer ; matrice pour plus de 3 bits.</li><li>Gray : $G_i=B_{i+1}\\xor B_i$ ; $B_i=B_{i+1}\\xor G_i$.</li><li>Multiplexeur : $S=\\sum m_iE_i$ ; génère toute fonction (LUT) en temps constant.</li><li>Comparateur : $(A=B)=\\prod\\nb{A_i\\xor B_i}$ ; complet depuis les poids forts.</li><li>Additionneur complet : $S=A\\xor B\\xor C$, $C^+=AB+(A\\xor B)C$ ; propagation de retenue.</li></ul>",
      "debut": 27,
-     "fin": 32,
+     "fin": 33,
      "partie": null,
      "sections": [
       {
@@ -744,44 +744,44 @@ window.LC = {
      "objectifs": "<ul><li>Comprendre l'origine d'un glitch.</li><li>Écrire tables et équations des bascules RS, D latch, D flip-flop, JK.</li><li>Distinguer synchronisation sur niveau et sur front ; connaître $t_{setup}$, $t_{hold}$, $t_W$.</li><li>Concevoir registres tampons, à décalage, universels, et un générateur pseudo-aléatoire.</li></ul>",
      "prerequis": "Chapitres 1, 3 et 4.",
      "essentiel": "<ul><li>Glitch : chemins de retards différents ; point mémoire : boucle d'un nombre pair d'inverseurs.</li><li>RS NOR : $Q^+=(Q+S)\\nb R$, $R=S=1$ interdit ; RS NAND : entrées actives à 0.</li><li>D latch : $Q^+=\\nb EQ+ED$, transparent sur niveau ; $S=ED$, $R=E\\nb D$ ; ou multiplexeur.</li><li>D flip-flop : $Q^+=D$ au front ; maître–esclave ; $t_{setup}$, $t_{hold}$, $t_W$ ; $\\nb{PR}$, $\\nb{CLR}$ asynchrones.</li><li>JK : $Q^+=J\\nb Q+\\nb KQ$ ; $J=K=1$ : basculement.</li><li>Registres : tampon, décalage, universel ; décalage $=\\times$ ou $\\div\\,2^N$ ; LFSR : $2^n-1$ états.</li></ul>",
-     "debut": 33,
-     "fin": 38,
+     "debut": 34,
+     "fin": 39,
      "partie": null,
      "sections": [
       {
        "titre": "Combinatoire, séquentiel asynchrone, séquentiel synchrone",
-       "page": 33
+       "page": 34
       },
       {
        "titre": "Le point mémoire élémentaire",
-       "page": 33
+       "page": 34
       },
       {
        "titre": "La bascule RS",
-       "page": 34
-      },
-      {
-       "titre": "La bascule D latch (verrou)",
-       "page": 34
-      },
-      {
-       "titre": "La bascule D flip-flop (sur front)",
        "page": 35
       },
       {
-       "titre": "La bascule JK",
+       "titre": "La bascule D latch (verrou)",
+       "page": 35
+      },
+      {
+       "titre": "La bascule D flip-flop (sur front)",
        "page": 36
       },
       {
-       "titre": "Registres",
+       "titre": "La bascule JK",
        "page": 37
+      },
+      {
+       "titre": "Registres",
+       "page": 38
       }
      ],
      "methodes": [
       {
        "num": "5.1",
        "titre": "Réaliser un D latch",
-       "page": 35
+       "page": 36
       }
      ],
      "pdf": "docs/conception-systemes-logiques/chapitre-05.pdf"
@@ -793,53 +793,53 @@ window.LC = {
      "objectifs": "<ul><li>Expliquer pourquoi l'asynchrone pose problème (aléas, courses critiques) et ce qu'apporte l'horloge.</li><li>Distinguer machines de Moore et de Mealy.</li><li>Dessiner un diagramme d'états robuste ; écrire tables de transitions et de sorties.</li><li>Synthétiser avec un codage binaire ou un codage 1 parmi N ; ajouter un RESET.</li></ul>",
      "prerequis": "Chapitres 1 et 5.",
      "essentiel": "<ul><li>Asynchrone : aléas, courses critiques, codes inexistants ; synchrone : l'horloge masque les transitoires, mais doit être rapide devant les entrées.</li><li>Moore : sorties fonctions de l'état seul (privilégié) ; Mealy : de l'état et des entrées.</li><li>Cinq étapes : cahier des charges, graphe, codage et tables, équations, schéma. Un seul état actif.</li><li>Maintien $=$ complément de la réunion des conditions de sortie ; conditions de sortie exclusives.</li><li>Bascules D : $D_i=A_i^+$. RESET par les entrées de forçage (synthèse inchangée).</li><li>1 parmi N : $D_i=$ évolution $+$ maintien, lu sur le graphe.</li></ul>",
-     "debut": 39,
-     "fin": 44,
+     "debut": 40,
+     "fin": 46,
      "partie": null,
      "sections": [
       {
        "titre": "Qu'est-ce que la logique séquentielle ?",
-       "page": 39
+       "page": 40
       },
       {
        "titre": "Les problèmes de l'asynchrone",
-       "page": 39
+       "page": 40
       },
       {
        "titre": "Les systèmes synchrones",
-       "page": 40
-      },
-      {
-       "titre": "Le diagramme d'états",
-       "page": 40
-      },
-      {
-       "titre": "Exemple : le bouton à bascule",
        "page": 41
       },
       {
-       "titre": "Initialisation : entrées de forçage",
+       "titre": "Le diagramme d'états",
+       "page": 41
+      },
+      {
+       "titre": "Exemple : le bouton à bascule",
        "page": 42
       },
       {
-       "titre": "Exemple complet : le ventilateur",
+       "titre": "Initialisation : entrées de forçage",
        "page": 43
       },
       {
-       "titre": "Le codage 1 parmi N (une bascule par état)",
+       "titre": "Exemple complet : le ventilateur",
        "page": 44
+      },
+      {
+       "titre": "Le codage 1 parmi N (une bascule par état)",
+       "page": 45
       }
      ],
      "methodes": [
       {
        "num": "6.1",
        "titre": "Synthétiser une machine à états",
-       "page": 41
+       "page": 42
       },
       {
        "num": "6.2",
        "titre": "Ajouter un RESET",
-       "page": 42
+       "page": 43
       }
      ],
      "pdf": "docs/conception-systemes-logiques/chapitre-06.pdf"
@@ -851,37 +851,37 @@ window.LC = {
      "objectifs": "<ul><li>Définir compteur synchrone/asynchrone, à cycle complet/incomplet.</li><li>Réaliser un diviseur par 2 et un compteur asynchrone ; en connaître les défauts.</li><li>Synthétiser un compteur synchrone modulo $N$ et traiter les états hors cycle.</li></ul>",
      "prerequis": "Chapitres 5 et 6.",
      "essentiel": "<ul><li>Cycle complet : $N=2^n$ ; incomplet : $2^{n-1}&lt;N&lt;2^n$, états hors cycle à traiter.</li><li>Asynchrone : cascade de diviseurs par 2 ; temps de propagation cumulés, états transitoires ; troncature par <em>clear</em> déconseillée.</li><li>Synchrone : table de transition, $D_k=Q_k^+$ par Karnaugh ; $D_k=(Q_1\\cdots Q_{k-1})\\xor Q_k$ en binaire ; $f_{max}=1/(T_{PL}+T_B)$.</li><li>Modulo 5 : $D_1=\\nb{Q_1}\\,\\nb{Q_3}$, $D_2=Q_1\\xor Q_2$, $D_3=Q_1Q_2$.</li></ul>",
-     "debut": 45,
-     "fin": 48,
+     "debut": 47,
+     "fin": 50,
      "partie": null,
      "sections": [
       {
        "titre": "Définitions",
-       "page": 45
+       "page": 47
       },
       {
        "titre": "Le diviseur par 2",
-       "page": 45
+       "page": 47
       },
       {
        "titre": "Compteurs asynchrones",
-       "page": 45
+       "page": 47
       },
       {
        "titre": "Compteurs synchrones",
-       "page": 46
+       "page": 48
       }
      ],
      "methodes": [
       {
        "num": "7.1",
        "titre": "Cycle incomplet en asynchrone (déconseillé)",
-       "page": 46
+       "page": 48
       },
       {
        "num": "7.2",
        "titre": "Synthétiser un compteur synchrone",
-       "page": 47
+       "page": 49
       }
      ],
      "pdf": "docs/conception-systemes-logiques/chapitre-07.pdf"
@@ -893,29 +893,29 @@ window.LC = {
      "objectifs": "<ul><li>Caractériser une mémoire : capacité, organisation, modes, accès.</li><li>Décrire la structure générale (bus d'adresses et de données, décodeurs, $\\nb{CS}$, $R/\\nb W$).</li><li>Comparer les cellules SRAM et DRAM ; estimer une période de rafraîchissement.</li><li>Distinguer ROM, PROM, EPROM et EEPROM.</li></ul>",
      "prerequis": "Chapitres 3, 4 et 5.",
      "essentiel": "<ul><li>$2^n$ mots de $m$ bits ; $\\nb{CS}$, $R/\\nb W$ ; décodeurs de lignes et de colonnes.</li><li>SRAM : bistable, 6 transistors, volatile. DRAM : condensateur, 3 ou 1 transistor, rafraîchissement ($\\Delta t=C_P\\,\\Delta V/I_f$), plus dense, moins chère.</li><li>ROM : masque ; PROM : fusibles, une fois ; EPROM : grille flottante, effacement UV ; EEPROM : effacement électrique sur site.</li></ul>",
-     "debut": 49,
-     "fin": 53,
+     "debut": 51,
+     "fin": 55,
      "partie": null,
      "sections": [
       {
        "titre": "Un peu d'histoire",
-       "page": 49
-      },
-      {
-       "titre": "Caractéristiques et classification",
-       "page": 49
-      },
-      {
-       "titre": "Structure générale",
-       "page": 50
-      },
-      {
-       "titre": "Mémoires vives : SRAM et DRAM",
        "page": 51
       },
       {
-       "titre": "Mémoires mortes",
+       "titre": "Caractéristiques et classification",
+       "page": 51
+      },
+      {
+       "titre": "Structure générale",
        "page": 52
+      },
+      {
+       "titre": "Mémoires vives : SRAM et DRAM",
+       "page": 53
+      },
+      {
+       "titre": "Mémoires mortes",
+       "page": 54
       }
      ],
      "methodes": [],
@@ -928,35 +928,80 @@ window.LC = {
      "objectifs": "<ul><li>Connaître le vocabulaire : ASIC, PLD, PLA, PAL, CPLD, FPGA.</li><li>Utiliser une mémoire ou un PAL comme générateur de fonctions.</li><li>Décrire l'architecture d'un FPGA : blocs logiques (LUT), entrées/sorties, routage, flot de conception.</li></ul>",
      "prerequis": "Chapitres 4, 5 et 8.",
      "essentiel": "<ul><li>Mémoire : ET fixe, OU programmable ; PAL : ET programmable, OU fixe ; PLA : les deux programmables.</li><li>PAL $+$ bascule $+$ macrocellule $=$ EPLD ; EPLD en blocs $+$ matrice d'interconnexion $=$ CPLD.</li><li>FPGA : blocs logiques (LUT $+$ bascule D), blocs d'E/S, routage programmable ; remplissage $\\le75$ %.</li><li>Flot : description (VHDL), synthèse, simulation, placement-routage, simulation temporelle, configuration.</li></ul>",
-     "debut": 54,
-     "fin": 57,
+     "debut": 56,
+     "fin": 59,
      "partie": null,
      "sections": [
       {
        "titre": "Définitions et historique",
-       "page": 54
+       "page": 56
       },
       {
        "titre": "La mémoire comme composant programmable",
-       "page": 55
+       "page": 57
       },
       {
        "titre": "PAL, EPLD et CPLD",
-       "page": 55
+       "page": 57
       },
       {
        "titre": "Les FPGA",
-       "page": 56
+       "page": 58
       }
      ],
      "methodes": [
       {
        "num": "9.1",
        "titre": "Flot de conception sur FPGA",
-       "page": 56
+       "page": 58
       }
      ],
      "pdf": "docs/conception-systemes-logiques/chapitre-09.pdf"
+    },
+    {
+     "n": 10,
+     "titre": "Du cours au BE : l'armoire à vidéoprojecteurs",
+     "intro": "Le bureau d'études de logique consiste à concevoir, sur une carte FPGA avec Quartus, la commande d'une armoire de six vidéoprojecteurs. Tout ce qu'il demande est dans ce livre : ce chapitre dit, module par module, <em>quel outil du cours utiliser et comment</em>, pour savoir quoi faire à partir du cours seul. Le compte rendu des séances (sur ce site) raconte ce qui a été fait ; ce chapitre donne la méthode.",
+     "objectifs": "<ul><li>Découper le cahier des charges en modules et reconnaître, pour chacun, le type de circuit du cours.</li><li>Passer d'une méthode du cours au schéma Quartus : polarités, horloge unique, validation, initialisation.</li><li>Préparer les modules suivants (décompteur et afficheur 20 s, machine globale) avant la séance.</li></ul>",
+     "prerequis": "Chapitres 1, 4, 5, 6 et 7.",
+     "essentiel": "<ul><li>Combinatoire (MA7, MA20) : table, Karnaugh ou multiplexeur ; séquentiel (MCV, MD20, machine globale) : graphe, 1 parmi N ou compteur synchrone.</li><li>Carte : afficheurs en logique négative ($S_k=\\nb x$) ; $\\nb{PR}$, $\\nb{CLR}$ actives à 0 et prioritaires ; entrée non branchée $=1$.</li><li>Une seule horloge (50 MHz) ; boutons par détecteur de front ($P=A\\,\\nb B$) ; le 1 Hz sur ENA, jamais sur l'horloge.</li><li>MD20 : deux décades BCD, $ENA_U=T\\,\\nb{FIN}$, $ENA_D=T\\,\\nb{FIN}(U=0)$, chargement de 20 ; MA20 $=$ deux MA7.</li><li>Machine globale INIT $\\to$ BGV $\\to$ BGC $\\to$ BGS en Moore, sorties $=$ validations des modules.</li></ul>",
+     "debut": 60,
+     "fin": 67,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Le projet et sa découpe",
+       "page": 60
+      },
+      {
+       "titre": "La méthode, du cahier des charges à la carte",
+       "page": 61
+      },
+      {
+       "titre": "Les briques du cours utilisées sur la carte",
+       "page": 62
+      },
+      {
+       "titre": "Préparer le décompteur et l'afficheur 20 s",
+       "page": 63
+      },
+      {
+       "titre": "La machine globale et les autres modules",
+       "page": 65
+      },
+      {
+       "titre": "Déboguer sur la carte",
+       "page": 65
+      }
+     ],
+     "methodes": [
+      {
+       "num": "10.1",
+       "titre": "Concevoir un module du BE",
+       "page": 61
+      }
+     ],
+     "pdf": "docs/conception-systemes-logiques/chapitre-10.pdf"
     }
    ]
   },

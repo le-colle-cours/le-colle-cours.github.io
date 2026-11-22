@@ -26,7 +26,7 @@ LIVRES = [
     (2, 'metrologie-circuits-puissance', 'electricite', 'Métrologie et circuits de puissance',
      "Unités et incertitudes, instruments et mesures électriques, puissance en monophasé et systèmes triphasés."),
     (4, 'conception-systemes-logiques', 'numerique', 'Conception des systèmes logiques',
-     "Algèbre de Boole, codage, logique CMOS, circuits combinatoires et séquentiels, mémoires et composants programmables."),
+     "Algèbre de Boole, codage, logique CMOS, circuits combinatoires et séquentiels, mémoires et composants programmables, et le cours appliqué au BE (armoire à vidéoprojecteurs)."),
     (14, 'be-logique-armoire', 'numerique', "BE de logique : l'armoire à vidéoprojecteurs",
      "Compte rendu des séances 1 et 2 : étapes, choix et obstacles rencontrés pour l'afficheur 7 segments (MA7) et le choix du vidéoprojecteur (MCV), puis ce qu'il faut pour la séance 3."),
     (10, 'architecture-assembleur', 'numerique', 'Architecture et programmation en assembleur',
