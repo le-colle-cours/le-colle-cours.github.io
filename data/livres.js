@@ -33,7 +33,7 @@ window.LC = {
    "matiere": "electricite",
    "titre": "Méthodes d'analyse des circuits",
    "description": "Signaux, dipôles, lois de Kirchhoff et théorèmes généraux, transformée de Laplace et fonctions de transfert, quadripôles.",
-   "pages": 45,
+   "pages": 54,
    "pdf": "docs/methodes-analyse-circuits.pdf",
    "fiche": "docs/methodes-analyse-circuits/fiche-revision.pdf",
    "chapitres": [
@@ -43,9 +43,9 @@ window.LC = {
      "intro": "Avant d'étudier un circuit, il faut savoir décrire ce qui le traverse : des signaux (tensions, courants) et la façon dont un système les transforme. Le cas central de tout le cours est le <em>régime permanent sinusoïdal</em> (RPS), où les représentations de Fresnel et complexe remplacent les équations différentielles par de l'algèbre.",
      "objectifs": "<ul><li>Connaître les signaux usuels : échelon, Dirac, sinusoïdes, exponentielles.</li><li>Calculer valeur moyenne, puissance moyenne, valeur efficace.</li><li>Connaître les propriétés des systèmes : stabilité, invariance, linéarité, convolution.</li><li>Passer d'un signal sinusoïdal à son vecteur de Fresnel et à son complexe associé ; définir impédance et admittance.</li></ul>",
      "prerequis": "Nombres complexes (module, argument, forme exponentielle) ; intégrales ; trigonométrie.",
-     "essentiel": "<ul><li>$u$ (échelon) et $\\delta=\\diff u/\\diff t$ (aire $1$) ; sinusoïde $X_{\\max}\\sin(\\omega t+\\phi)$, $\\omega=2\\pi/T$ ; composantes incommensurables $\\Rightarrow$ quasi-périodique.</li><li>$X_{\\mathrm{moy}}=\\frac1T\\int_Tx$ ; $P_x=\\frac1T\\int_Tx^2$ ; $X_{\\eff}=\\sqrt{P_x}$ ; sinusoïde : $X_{\\max}=X_{\\eff}\\sqrt2$.</li><li>$p=vi$, $W=\\int p\\,\\diff t$, $P=\\langle p\\rangle$.</li><li>SLTI : $y=x*h$, $h$ = réponse impulsionnelle.</li><li>RPS : $x=X\\sqrt2\\cos(\\omega t+\\phi)\\leftrightarrow\\cp X=Xe^{j\\phi}$ ; $\\diff/\\diff t\\leftrightarrow\\times j\\omega$, $\\int\\leftrightarrow\\div j\\omega$.</li><li>$\\cp Z=\\cp V/\\cp I=R+jX$, $\\cp Y=1/\\cp Z=G+jB$, $G=R/(R^2+X^2)$, $B=-X/(R^2+X^2)$.</li></ul>",
+     "essentiel": "<ul><li>$u$ (échelon) et $\\delta=\\diff u/\\diff t$ (aire $1$) ; sinusoïde $X_{\\max}\\sin(\\omega t+\\phi)$, $\\omega=2\\pi/T$ ; composantes incommensurables $\\Rightarrow$ quasi-périodique.</li><li>$X_{\\mathrm{moy}}=\\frac1T\\int_Tx$ ; $P_x=\\frac1T\\int_Tx^2$ ; $X_{\\eff}=\\sqrt{P_x}$ ; sinusoïde : $X_{\\max}=X_{\\eff}\\sqrt2$.</li><li>Redressé double : $\\frac{2E}\\pi$, $\\frac E{\\sqrt2}$ ; simple : $\\frac E\\pi$, $\\frac E2$ ; rectangulaire : $\\alpha E$, $E\\sqrt\\alpha$ ; moyenne linéaire, efficace non.</li><li>$a\\cos+b\\sin=C\\cos(\\omega t+\\varphi)$ ($\\cos\\varphi=a/C$, $\\sin\\varphi=-b/C$) ; produit : raies en $f_0\\pm f_1$.</li><li>BF : $L$ court-circuit, $C$ ouvert ; HF : $L$ ouvert, $C$ court-circuit.</li><li>$p=vi$, $W=\\int p\\,\\diff t$, $P=\\langle p\\rangle$.</li><li>SLTI : $y=x*h$, $h$ = réponse impulsionnelle.</li><li>RPS : $x=X\\sqrt2\\cos(\\omega t+\\phi)\\leftrightarrow\\cp X=Xe^{j\\phi}$ ; $\\diff/\\diff t\\leftrightarrow\\times j\\omega$, $\\int\\leftrightarrow\\div j\\omega$.</li><li>$\\cp Z=\\cp V/\\cp I=R+jX$, $\\cp Y=1/\\cp Z=G+jB$, $G=R/(R^2+X^2)$, $B=-X/(R^2+X^2)$.</li></ul>",
      "debut": 5,
-     "fin": 12,
+     "fin": 14,
      "partie": null,
      "sections": [
       {
@@ -58,22 +58,28 @@ window.LC = {
       },
       {
        "titre": "Valeur moyenne, puissance, valeur efficace",
-       "page": 7
-      },
-      {
-       "titre": "Systèmes à temps continu",
        "page": 8
       },
       {
+       "titre": "Systèmes à temps continu",
+       "page": 10
+      },
+      {
        "titre": "Représentations en régime permanent sinusoïdal",
-       "page": 9
+       "page": 11
       },
       {
        "titre": "Impédance et admittance",
-       "page": 11
+       "page": 12
       }
      ],
-     "methodes": [],
+     "methodes": [
+      {
+       "num": "1.1",
+       "titre": "Impédance en basse et en haute fréquence",
+       "page": 13
+      }
+     ],
      "pdf": "docs/methodes-analyse-circuits/chapitre-01.pdf"
     },
     {
@@ -83,36 +89,36 @@ window.LC = {
      "objectifs": "<ul><li>Utiliser correctement tension, courant et conventions récepteur/générateur.</li><li>Modéliser une source réelle (Thévenin, Norton) et passer d'un modèle à l'autre ; connaître les sources liées.</li><li>Connaître les relations $v$–$i$ et l'énergie de $R$, $L$, $C$, et les règles de continuité.</li><li>Résoudre les circuits RC et RL soumis à un échelon ; connaître les impédances complexes.</li></ul>",
      "prerequis": "Chapitre 1 ; équations différentielles linéaires du premier ordre.",
      "essentiel": "<ul><li>$U_{AB}=V_A-V_B$ ; $I=\\Delta Q/\\Delta t$. Récepteur : $UI$ reçue ; générateur : $UI$ fournie.</li><li>Ne jamais court-circuiter une source de tension parfaite ni ouvrir une source de courant parfaite.</li><li>Thévenin : $V=E-R_iI$ (idéale si $R_i\\ll R$) ; Norton : $I=I_d-V/R_i$ (idéale si $R_i\\gg R$) ; équivalence : même $R_i$, $E=R_iI_d$.</li><li>Sources liées : $A_v$, $r$, $g$, $A_i$.</li><li>$i=C\\,\\diff v/\\diff t$, $v=L\\,\\diff i/\\diff t$ ; $E_C=\\frac12Cv^2$, $E_L=\\frac12Li^2$ ; $v_C$ et $i_L$ continus.</li><li>Échelon $E$ : RC (sortie sur $C$) $E(1-e^{-t/RC})$ ; RL (sortie sur $L$) $Ee^{-tR/L}$.</li><li>$\\cp Z_R=R$, $\\cp Z_C=1/(jC\\omega)$, $\\cp Z_L=jL\\omega$.</li></ul>",
-     "debut": 13,
-     "fin": 19,
+     "debut": 15,
+     "fin": 21,
      "partie": null,
      "sections": [
       {
        "titre": "Tension, courant, conventions",
-       "page": 13
+       "page": 15
       },
       {
        "titre": "Éléments actifs : les sources",
-       "page": 14
-      },
-      {
-       "titre": "Éléments passifs",
        "page": 16
       },
       {
+       "titre": "Éléments passifs",
+       "page": 18
+      },
+      {
        "titre": "Régime transitoire : circuits RC et RL",
-       "page": 17
+       "page": 19
       },
       {
        "titre": "Éléments passifs en régime sinusoïdal",
-       "page": 18
+       "page": 20
       }
      ],
      "methodes": [
       {
        "num": "2.1",
        "titre": "Réponse d'un circuit du premier ordre à un échelon",
-       "page": 17
+       "page": 19
       }
      ],
      "pdf": "docs/methodes-analyse-circuits/chapitre-02.pdf"
@@ -123,51 +129,51 @@ window.LC = {
      "intro": "Les lois de Kirchhoff suffisent en principe à résoudre tout circuit. Les théorèmes qui suivent (superposition, Thévenin, Norton, Millman, Maxwell, Kennelly) servent à le faire <em>vite</em>, en réduisant le circuit ou en le découpant. Tous s'appliquent aux circuits linéaires, en résistances comme en impédances complexes (RPS) ou opérationnelles (Laplace).",
      "objectifs": "<ul><li>Écrire les lois des mailles et des nœuds ; utiliser les diviseurs de tension et de courant.</li><li>Associer des impédances en série et en parallèle.</li><li>Appliquer superposition, Thévenin, Norton, Millman, Maxwell et Kennelly.</li></ul>",
      "prerequis": "Chapitre 2 (conventions, sources, impédances).",
-     "essentiel": "<ul><li>Mailles : $\\sum\\pm V=0$ (signe $-$ si rencontrée par la pointe) ; nœuds : $\\sum I_{\\text{entrants}}=0$ ; ne garder que les équations indépendantes.</li><li>$V_1/U=R_1/(R_1+R_2)$ ; $I_1/I=R_2/(R_1+R_2)$ ; série $\\sum Z_i$ ; parallèle $1/\\sum(1/Z_i)$.</li><li>Superposition : une source à la fois (tension éteinte = CC, courant éteinte = CO).</li><li>Thévenin $(E_{th},Z_{th})$ série / Norton $(I_N,Z_N)$ parallèle : $E_{th}$ à vide, $I_N$ en court-circuit, $Z_{th}=Z_N$ sources éteintes, $I_N=E_{th}/Z_{th}$.</li><li>Millman : $V_0=\\sum(E_i/R_i)/\\sum(1/R_i)$.</li><li>Maxwell : réseau passif, source et courant échangeables.</li><li>Kennelly : $Z_{BC}=\\Sigma/Z_A$… ; $Z_A=Z_{AB}Z_{CA}/(Z_{AB}+Z_{BC}+Z_{CA})$… ; symétrique : $\\times3$.</li></ul>",
-     "debut": 20,
-     "fin": 26,
+     "essentiel": "<ul><li>Mailles : $\\sum\\pm V=0$ (signe $-$ si rencontrée par la pointe) ; nœuds : $\\sum I_{\\text{entrants}}=0$ ; ne garder que les équations indépendantes.</li><li>$V_1/U=R_1/(R_1+R_2)$ ; $I_1/I=R_2/(R_1+R_2)$ ; série $\\sum Z_i$ ; parallèle $1/\\sum(1/Z_i)$.</li><li>Superposition : une source à la fois (tension éteinte = CC, courant éteinte = CO).</li><li>Thévenin $(E_{th},Z_{th})$ série / Norton $(I_N,Z_N)$ parallèle : $E_{th}$ à vide, $I_N$ en court-circuit, $Z_{th}=Z_N$ sources éteintes, $I_N=E_{th}/Z_{th}$.</li><li>Millman : $V_0=\\sum(E_i/R_i)/\\sum(1/R_i)$.</li><li>Source liée : ne jamais l'éteindre ; $Z_{th}$ par source test ($E_0/I_0$) ou par $E_{th}/I_N$.</li><li>Dualité : $V\\leftrightarrow I$, série $\\leftrightarrow$ parallèle, $Z\\leftrightarrow Y$, $L\\leftrightarrow C$, Thévenin $\\leftrightarrow$ Norton.</li><li>Maxwell : réseau passif, source et courant échangeables.</li><li>Kennelly : $Z_{BC}=\\Sigma/Z_A$… ; $Z_A=Z_{AB}Z_{CA}/(Z_{AB}+Z_{BC}+Z_{CA})$… ; symétrique : $\\times3$.</li></ul>",
+     "debut": 22,
+     "fin": 32,
      "partie": null,
      "sections": [
       {
        "titre": "Lois de Kirchhoff",
-       "page": 20
+       "page": 22
       },
       {
        "titre": "Principe de superposition",
-       "page": 22
-      },
-      {
-       "titre": "Théorèmes de Thévenin et de Norton",
-       "page": 22
-      },
-      {
-       "titre": "Théorème de Millman",
        "page": 24
       },
       {
-       "titre": "Théorème de Maxwell (réciprocité)",
+       "titre": "Théorèmes de Thévenin et de Norton",
        "page": 25
       },
       {
+       "titre": "Théorème de Millman",
+       "page": 28
+      },
+      {
+       "titre": "Théorème de Maxwell (réciprocité)",
+       "page": 30
+      },
+      {
        "titre": "Théorème de Kennelly (étoile–triangle)",
-       "page": 25
+       "page": 30
       }
      ],
      "methodes": [
       {
        "num": "3.1",
        "titre": "Appliquer la superposition",
-       "page": 22
+       "page": 25
       },
       {
        "num": "3.2",
        "titre": "Calculer $E_{th}$, $I_N$ et $Z_{th}=Z_N$",
-       "page": 23
+       "page": 26
       },
       {
        "num": "3.3",
        "titre": "Choisir une méthode de résolution",
-       "page": 26
+       "page": 31
       }
      ],
      "pdf": "docs/methodes-analyse-circuits/chapitre-03.pdf"
@@ -178,47 +184,47 @@ window.LC = {
      "intro": "Pour un régime quelconque (transitoires, échelons, impulsions), l'outil privilégié est la <em>transformée de Laplace</em> : elle change les équations différentielles du circuit en équations algébriques en $p$, et les conditions initiales y entrent naturellement. En régime permanent sinusoïdal, on passe au domaine complexe par $p=j\\omega$, et on étudie la réponse fréquentielle avec le <em>diagramme de Bode</em>.",
      "objectifs": "<ul><li>Connaître la définition, la table et les propriétés de la transformée de Laplace.</li><li>Modéliser $R$, $L$, $C$ dans le domaine de Laplace, conditions initiales comprises.</li><li>Calculer une réponse temporelle par décomposition en éléments simples.</li><li>Déterminer le régime sinusoïdal permanent ; tracer les diagrammes de Bode des 1<sup>er</sup> et 2<sup>e</sup> ordres.</li></ul>",
      "prerequis": "Chapitres 1–3 ; fractions rationnelles, logarithme décimal.",
-     "essentiel": "<ul><li>$F(p)=\\int_0^\\infty fe^{-pt}\\diff t$ ; table : $\\delta\\to1$, $u\\to\\frac1p$, $e^{-at}\\to\\frac1{p+a}$, $t^n\\to\\frac{n!}{p^{n+1}}$, $\\cos\\to\\frac p{p^2+\\omega^2}$, $\\sin\\to\\frac\\omega{p^2+\\omega^2}$, $e^{-at}\\times\\ \\Leftrightarrow\\ p\\to p+a$.</li><li>$f'\\to pF-f(0^-)$ ; $\\int\\to F/p$ ; retard $\\to e^{-t_0p}$ ; valeurs initiale/finale par $pF(p)$.</li><li>$Z_C=\\frac1{Cp}$ (+ source $CV_{0^-}$ ou $V_{0^-}/p$) ; $Z_L=Lp$ (+ source $LI_{0^-}$ ou $I_{0^-}/p$) ; $S=HE$.</li><li>Libre/forcée (pôles de $H$/de $E$) ; transitoire/permanente ; permanente liée aux pôles de $E$.</li><li>Inverse : éléments simples puis table.</li><li>RSP : $s_{per}=E|H(j\\omega)|\\cos(\\omega t+\\varphi+\\psi)$, $p=j\\omega$.</li><li>1<sup>er</sup> ordre $\\frac K{1+\\tau p}$ : $-3$ dB et $-\\pi/4$ en $\\omega_0=1/\\tau$, puis $-20$ dB/déc., $-\\pi/2$.</li><li>2<sup>e</sup> ordre : $|H(j\\omega_0)|=\\frac K{2m}$, $\\psi(\\omega_0)=-\\frac\\pi2$, $-40$ dB/déc., $-\\pi$ ; résonance si $m&lt;\\frac{\\sqrt2}2$, $\\omega_{res}=\\omega_0\\sqrt{1-2m^2}$.</li></ul>",
-     "debut": 27,
-     "fin": 37,
+     "essentiel": "<ul><li>Déphaseur $\\frac{1-\\tau p}{1+\\tau p}$ : $0$ dB, $\\psi=-2\\arctan\\tau\\omega$. Passe-haut 2<sup>e</sup> ordre $\\frac{-x^2}{1-x^2+2jmx}$ ; réjecteur $\\frac{1-x^2}{1-x^2+2jmx}$.</li><li>Entrée à plusieurs fréquences : superposition, lire $|H|$ et $\\psi$ sur le Bode pour chaque composante.</li><li>$F(p)=\\int_0^\\infty fe^{-pt}\\diff t$ ; table : $\\delta\\to1$, $u\\to\\frac1p$, $e^{-at}\\to\\frac1{p+a}$, $t^n\\to\\frac{n!}{p^{n+1}}$, $\\cos\\to\\frac p{p^2+\\omega^2}$, $\\sin\\to\\frac\\omega{p^2+\\omega^2}$, $e^{-at}\\times\\ \\Leftrightarrow\\ p\\to p+a$.</li><li>$f'\\to pF-f(0^-)$ ; $\\int\\to F/p$ ; retard $\\to e^{-t_0p}$ ; valeurs initiale/finale par $pF(p)$.</li><li>$Z_C=\\frac1{Cp}$ (+ source $CV_{0^-}$ ou $V_{0^-}/p$) ; $Z_L=Lp$ (+ source $LI_{0^-}$ ou $I_{0^-}/p$) ; $S=HE$.</li><li>Libre/forcée (pôles de $H$/de $E$) ; transitoire/permanente ; permanente liée aux pôles de $E$.</li><li>Inverse : éléments simples puis table.</li><li>RSP : $s_{per}=E|H(j\\omega)|\\cos(\\omega t+\\varphi+\\psi)$, $p=j\\omega$.</li><li>1<sup>er</sup> ordre $\\frac K{1+\\tau p}$ : $-3$ dB et $-\\pi/4$ en $\\omega_0=1/\\tau$, puis $-20$ dB/déc., $-\\pi/2$.</li><li>2<sup>e</sup> ordre : $|H(j\\omega_0)|=\\frac K{2m}$, $\\psi(\\omega_0)=-\\frac\\pi2$, $-40$ dB/déc., $-\\pi$ ; résonance si $m&lt;\\frac{\\sqrt2}2$, $\\omega_{res}=\\omega_0\\sqrt{1-2m^2}$.</li></ul>",
+     "debut": 33,
+     "fin": 45,
      "partie": null,
      "sections": [
       {
        "titre": "Transformée de Laplace",
-       "page": 27
+       "page": 33
       },
       {
        "titre": "Circuits dans le domaine de Laplace",
-       "page": 29
+       "page": 35
       },
       {
        "titre": "Transformée de Laplace inverse",
-       "page": 31
+       "page": 37
       },
       {
        "titre": "Régime sinusoïdal permanent",
-       "page": 32
+       "page": 38
       },
       {
        "titre": "Diagrammes de Bode",
-       "page": 32
+       "page": 39
       }
      ],
      "methodes": [
       {
        "num": "4.1",
        "titre": "Inverser une fraction rationnelle",
-       "page": 31
+       "page": 37
       },
       {
        "num": "4.2",
        "titre": "Tracer un diagramme de Bode",
-       "page": 36
+       "page": 43
       },
       {
        "num": "4.3",
        "titre": "Retrouver ou concevoir un filtre du premier ordre",
-       "page": 37
+       "page": 44
       }
      ],
      "pdf": "docs/methodes-analyse-circuits/chapitre-04.pdf"
@@ -229,37 +235,37 @@ window.LC = {
      "intro": "Un quadripôle est une partie de réseau qui communique avec l'extérieur par deux paires de bornes, l'entrée et la sortie, chacune constituant un dipôle. Quatre grandeurs le décrivent — $V_1$, $I_1$, $V_2$, $I_2$ — liées par deux équations propres au quadripôle ; les deux équations manquantes viennent de ce qui est branché en entrée et en sortie (relations de fermeture). On travaille en grandeurs complexes ou en Laplace.",
      "objectifs": "<ul><li>Connaître les six jeux de paramètres et savoir les déterminer par des essais à vide ou en court-circuit.</li><li>Passer d'un jeu de paramètres à un autre ; reconnaître un quadripôle passif ou symétrique.</li><li>Calculer impédances d'entrée et de sortie, gains ; associer des quadripôles.</li><li>Connaître le transformateur et le gyrateur.</li></ul>",
      "prerequis": "Chapitres 2–3 ; calcul matriciel $2\\times2$.",
-     "essentiel": "<ul><li>Courants entrants ; $[Z]$ (CO), $[Y]$ (CC), $[h]$, $[g]=[h]^{-1}$, $[a]$ avec $(V_2,-I_2)$ ; $[Z]=[Y]^{-1}$.</li><li>Chaque paramètre : rapport de deux grandeurs, un accès en court-circuit ($V=0$) ou ouvert ($I=0$).</li><li>Passif : $AD-BC=1$, $Z_{12}=Z_{21}$, $Y_{12}=Y_{21}$, $h_{12}=-h_{21}$. Symétrique : $A=D$, $Z_{11}=Z_{22}$, $\\Delta h=1$.</li><li>$Z_E$ dépend de la charge, $Z_S$ du générateur ; $G_V=V_2/V_1$, $G_I=I_2/I_1$.</li><li>Cascade $[a]=[a_1][a_2]$ ; parallèle $[Y]=[Y']+[Y'']$ ; série $[Z]=[Z']+[Z'']$.</li><li>T : $[Z]=\\begin{bmatrix}z_1+z_3&amp;z_3\\\\z_3&amp;z_2+z_3\\end{bmatrix}$ ; $\\Pi$ : $[Y]=\\begin{bmatrix}y_1+y_3&amp;-y_3\\\\-y_3&amp;y_2+y_3\\end{bmatrix}$.</li><li>Transformateur : $V_2/V_1=I_1/I_2=k$, isolement. Gyrateur : $v_2=ri_1$, $v_1=-ri_2$ ; $L\\to C_{eq}=L/r^2$, $C\\to L_{eq}=Cr^2$.</li></ul>",
-     "debut": 38,
-     "fin": 45,
+     "essentiel": "<ul><li>Courants entrants ; $[Z]$ (CO), $[Y]$ (CC), $[h]$, $[g]=[h]^{-1}$, $[a]$ avec $(V_2,-I_2)$ ; $[Z]=[Y]^{-1}$.</li><li>Chaque paramètre : rapport de deux grandeurs, un accès en court-circuit ($V=0$) ou ouvert ($I=0$).</li><li>Passif : $AD-BC=1$, $Z_{12}=Z_{21}$, $Y_{12}=Y_{21}$, $h_{12}=-h_{21}$. Symétrique : $A=D$, $Z_{11}=Z_{22}$, $\\Delta h=1$.</li><li>$Z_E$ dépend de la charge, $Z_S$ du générateur ; $G_V=V_2/V_1$, $G_I=I_2/I_1$.</li><li>Hybride : $h_{11}$ série $+$ source $h_{12}V_2$ ; $h_{21}I_1$ $\\|$ $1/h_{22}$ ; $G_I=\\frac{h_{21}}{1+h_{22}Z_L}$, $G_V=-\\frac{h_{21}Z_L}{h_{11}+\\Delta hZ_L}$.</li><li>$[a]=\\frac1{Z_{21}}\\begin{pmatrix}Z_{11}&amp;\\Delta Z\\\\1&amp;Z_{22}\\end{pmatrix}$.</li><li>Cascade $[a]=[a_1][a_2]$ ; parallèle $[Y]=[Y']+[Y'']$ ; série $[Z]=[Z']+[Z'']$.</li><li>T : $[Z]=\\begin{bmatrix}z_1+z_3&amp;z_3\\\\z_3&amp;z_2+z_3\\end{bmatrix}$ ; $\\Pi$ : $[Y]=\\begin{bmatrix}y_1+y_3&amp;-y_3\\\\-y_3&amp;y_2+y_3\\end{bmatrix}$.</li><li>Transformateur : $V_2/V_1=I_1/I_2=k$, isolement. Gyrateur : $v_2=ri_1$, $v_1=-ri_2$ ; $L\\to C_{eq}=L/r^2$, $C\\to L_{eq}=Cr^2$.</li></ul>",
+     "debut": 46,
+     "fin": 54,
      "partie": null,
      "sections": [
       {
        "titre": "Les paramètres d'un quadripôle",
-       "page": 38
+       "page": 46
       },
       {
        "titre": "Relations entre paramètres et types de quadripôles",
-       "page": 40
+       "page": 48
       },
       {
        "titre": "Impédances d'entrée et de sortie, gains",
-       "page": 41
+       "page": 49
       },
       {
        "titre": "Associations de quadripôles",
-       "page": 42
+       "page": 51
       },
       {
        "titre": "Exemples",
-       "page": 43
+       "page": 51
       }
      ],
      "methodes": [
       {
        "num": "5.1",
        "titre": "Déterminer les paramètres d'un quadripôle",
-       "page": 39
+       "page": 47
       }
      ],
      "pdf": "docs/methodes-analyse-circuits/chapitre-05.pdf"

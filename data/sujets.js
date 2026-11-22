@@ -10,5 +10,14 @@ window.LC_SUJETS = {
       "sujet": "docs/sujets/physique-des-materiaux/examen-blanc-sujet.pdf",
       "corrige": "docs/sujets/physique-des-materiaux/examen-blanc-corrige.pdf"
     }
+  ],
+  "methodes-analyse-circuits": [
+    {
+      "titre": "Examen blanc complet",
+      "description": "Tout le programme en 8 parties : QCM et cours, signaux (déphasage, spectre, valeurs moyennes et efficaces), Thévenin et superposition, Norton avec source liée, RSP et Fresnel, Laplace (réponse indicielle et RSP), Bode et filtrage, quadripôles.",
+      "duree": "4 h",
+      "sujet": "docs/sujets/methodes-analyse-circuits/examen-blanc-sujet.pdf",
+      "corrige": "docs/sujets/methodes-analyse-circuits/examen-blanc-corrige.pdf"
+    }
   ]
 };
