@@ -22,13 +22,3 @@ window.LC_SUJETS = {
   ]
 };
 
-/* Documents téléchargeables (hors sujets d'entraînement), par livre ; fichiers dans docs/documents/<livre>/. */
-window.LC_DOCUMENTS = {
-  "allemand-le-colle": [
-    {
-      "titre": "Questions : naissance et anniversaire",
-      "description": "Réponses aux dix questions du cours (Wer heißt…, Ist … geboren, Wann hat … Geburtstag, Wie alt ist…), points à retenir et fautes relevées dans l'énoncé.",
-      "fichier": "docs/documents/allemand-le-colle/reponses-questions-geburtstag.txt"
-    }
-  ]
-};

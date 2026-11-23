@@ -21,15 +21,6 @@ const sujets = l => {
     <p class="links"><a class="dl" href="${x.sujet}" target="_blank" rel="noopener">Sujet (PDF)</a>${x.corrige ? `<a class="dl" href="${x.corrige}" target="_blank" rel="noopener">Corrigé (PDF)</a>` : ''}</p>
   </div>`).join('')}</div>`;
 };
-const documents = l => {
-  const d = ((window.LC_DOCUMENTS || {})[l.id] || []);
-  if (!d.length) return '';
-  return `<div class="sujets"><h3>Documents</h3>${d.map(x => `<div class="sujet">
-    <p><strong>${esc(x.titre)}</strong></p>
-    <p>${esc(x.description)}</p>
-    <p class="links"><a class="dl" href="${x.fichier}" download="${x.fichier.split('/').pop()}">Télécharger (${(x.fichier.split('.').pop() || '').toUpperCase()})</a></p>
-  </div>`).join('')}</div>`;
-};
 $('#contenu').innerHTML = `
   <p class="kicker"><a href="index.html">Matières</a></p>
   <h1>${esc(M.titre)}</h1>
@@ -39,7 +30,6 @@ $('#contenu').innerHTML = `
     <p>${esc(l.description)}</p>
     <p class="links" style="margin-top:10px"><a href="${urlLecteur(l)}">Lire le livre complet</a>${lienPdf(l.pdf, 'Télécharger le PDF')}${l.fiche ? `<a class="dl" href="${l.fiche}" target="_blank" rel="noopener">Fiche de révision</a>` : ''}<span class="tag">${l.pages} pages</span></p>
     <ul class="chapitres formules">${chapitres(l)}</ul>
-    ${documents(l)}
     ${sujets(l)}
   </section>`).join('')}`;
 renderMath($('#contenu'));
