@@ -12,13 +12,14 @@ const chapitres = l => {
     return `${tete}<li><span class="n">${c.n}</span><a href="${urlChapitre(l, c.n)}">${c.titre}</a><span class="tag">${c.fin - c.debut + 1} p.</span></li>`;
   }).join('');
 };
+const fmt = f => (f.split('.').pop() || '').toUpperCase();
 const sujets = l => {
   const s = sujetsDe(l.id);
   if (!s.length) return '';
   return `<div class="sujets"><h3>S'entraîner</h3>${s.map(x => `<div class="sujet">
     <p><strong>${esc(x.titre)}</strong>${x.duree ? ` <span class="tag">${esc(x.duree)}</span>` : ''}</p>
     <p>${esc(x.description)}</p>
-    <p class="links"><a class="dl" href="${x.sujet}" target="_blank" rel="noopener">Sujet (PDF)</a>${x.corrige ? `<a class="dl" href="${x.corrige}" target="_blank" rel="noopener">Corrigé (PDF)</a>` : ''}</p>
+    <p class="links"><a class="dl" href="${x.sujet}" target="_blank" rel="noopener">Sujet (${fmt(x.sujet)})</a>${x.corrige ? `<a class="dl" href="${x.corrige}" target="_blank" rel="noopener">Corrigé (${fmt(x.corrige)})</a>` : ''}</p>
   </div>`).join('')}</div>`;
 };
 $('#contenu').innerHTML = `

@@ -2,6 +2,13 @@
    Fichier maintenu à la main : il n'est pas régénéré par outils/generer_site.py ;
    les PDF sont dans docs/sujets/<livre>/, dossier que le générateur ne touche pas. */
 window.LC_SUJETS = {
+  "allemand-le-colle": [
+    {
+      "titre": "Questions : naissance et anniversaire",
+      "description": "Réponses aux dix questions du cours (Wer heißt…, Ist … geboren, Wann hat … Geburtstag, Wie alt ist…), avec les points de grammaire à retenir et les fautes relevées dans l'énoncé.",
+      "sujet": "docs/sujets/allemand-le-colle/reponses-questions-geburtstag.txt"
+    }
+  ],
   "physique-des-materiaux": [
     {
       "titre": "Examen blanc complet",
