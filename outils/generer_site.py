@@ -46,7 +46,7 @@ LIVRES = [
     (13, 'probabilites', 'maths', "Probabilités",
      "Espaces de probabilité, variables et vecteurs aléatoires, lois usuelles, fonction caractéristique, théorèmes limites."),
     (7, 'allemand-le-colle', 'langues', 'Allemand',
-     "Prononciation, noms, conjugaison, phrase, négation, cas, nombres, se présenter, vocabulaire et textes modèles."),
+     "Lire et écrire, noms et verbes, phrase et négation, cas et lieux, nombres et dates, se présenter, humeurs et préférences, vocabulaire."),
 ]
 
 # ------------------------------------------------------------------ lecture LaTeX

@@ -2925,414 +2925,334 @@ window.LC = {
    "id": "allemand-le-colle",
    "matiere": "langues",
    "titre": "Allemand",
-   "description": "Prononciation, noms, conjugaison, phrase, négation, cas, nombres, se présenter, vocabulaire et textes modèles.",
-   "pages": 42,
+   "description": "Lire et écrire, noms et verbes, phrase et négation, cas et lieux, nombres et dates, se présenter, humeurs et préférences, vocabulaire.",
+   "pages": 26,
    "pdf": "docs/allemand-le-colle.pdf",
    "fiche": "docs/allemand-le-colle/fiche-revision.pdf",
    "chapitres": [
     {
      "n": 1,
-     "titre": "Prononciation et écriture",
-     "intro": "L'allemand se lit presque toujours comme il s'écrit : une fois les correspondances lettres–sons connues, on sait prononcer n'importe quel mot. Quelques sons n'existent pas en français et demandent un peu d'entraînement.",
-     "objectifs": "<ul><li>Lire les approximations de prononciation du livret.</li><li>Épeler avec l'alphabet allemand.</li><li>Prononcer voyelles, Umlaut, combinaisons et consonnes particulières.</li><li>Écrire correctement : majuscules, <span class=\"de\">ß</span> ou <span class=\"de\">ss</span>.</li></ul>",
+     "titre": "Lire et écrire l'allemand",
+     "intro": "L'allemand se lit presque toujours comme il s'écrit : une fois les correspondances entre lettres et sons connues, on sait prononcer n'importe quel mot. Quelques sons n'existent pas en français et demandent un peu d'entraînement.",
+     "objectifs": "<ul><li>Lire les approximations de prononciation du livre.</li><li>Épeler avec l'alphabet allemand.</li><li>Prononcer voyelles, Umlaut, groupes de lettres et consonnes particulières.</li><li>Écrire correctement : majuscules, <span class=\"de\">ß</span> ou <span class=\"de\">ss</span>.</li></ul>",
      "prerequis": "Aucun.",
-     "essentiel": "<ul><li><span class=\"de\">ei</span> = <span class=\"pr\">«&#8239;aï&#8239;»</span>, <span class=\"de\">ie</span> = <span class=\"pr\">«&#8239;i&#8239;»</span>, <span class=\"de\">eu/äu</span> = <span class=\"pr\">«&#8239;oï&#8239;»</span>, <span class=\"de\">sch</span> = <span class=\"pr\">«&#8239;ch&#8239;»</span>, <span class=\"de\">z</span> = <span class=\"pr\">«&#8239;ts&#8239;»</span>, <span class=\"de\">w</span> = <span class=\"pr\">«&#8239;v&#8239;»</span>, <span class=\"de\">v</span> = <span class=\"pr\">«&#8239;f&#8239;»</span>, <span class=\"de\">j</span> = <span class=\"pr\">«&#8239;y&#8239;»</span>, <span class=\"de\">sp/st</span> initial = <span class=\"pr\">«&#8239;chp/cht&#8239;»</span>.</li><li><span class=\"de\">ch</span> : <span class=\"pr\">«&#8239;kh&#8239;»</span> après a, o, u, au ; <span class=\"pr\">«&#8239;ç&#8239;»</span> ailleurs ; jamais <span class=\"pr\">«&#8239;ch&#8239;»</span> français.</li><li>Pas de nasales, tout se prononce ; b, d, g finaux durcis ; <span class=\"de\">-er</span> final = <span class=\"pr\">«&#8239;a&#8239;»</span>.</li><li>Accent sur la 1<sup>re</sup> syllabe (sauf mots étrangers).</li><li>Majuscule à tous les noms et à <span class=\"de\">Sie</span> ; <span class=\"de\">ß</span> après voyelle longue, <span class=\"de\">ss</span> après voyelle courte.</li></ul>",
-     "debut": 5,
-     "fin": 9,
+     "essentiel": "<ul><li><span class=\"de\">ei</span> = <span class=\"pr\">«&#8239;aï&#8239;»</span>, <span class=\"de\">ie</span> = <span class=\"pr\">«&#8239;i&#8239;»</span>, <span class=\"de\">eu/äu</span> = <span class=\"pr\">«&#8239;oï&#8239;»</span>, <span class=\"de\">sch</span> = <span class=\"pr\">«&#8239;ch&#8239;»</span>, <span class=\"de\">z</span> = <span class=\"pr\">«&#8239;ts&#8239;»</span>, <span class=\"de\">w</span> = <span class=\"pr\">«&#8239;v&#8239;»</span>, <span class=\"de\">v</span> = <span class=\"pr\">«&#8239;f&#8239;»</span>, <span class=\"de\">j</span> = <span class=\"pr\">«&#8239;y&#8239;»</span>, <span class=\"de\">sp/st</span> initial = <span class=\"pr\">«&#8239;chp/cht&#8239;»</span>.</li><li><span class=\"de\">ch</span> : <span class=\"pr\">«&#8239;kh&#8239;»</span> après a, o, u, au ; <span class=\"pr\">«&#8239;ç&#8239;»</span> ailleurs ; jamais le « ch » français.</li><li>Pas de nasales, tout se prononce ; <span class=\"de\">b, d, g</span> finaux durcis ; <span class=\"de\">-er</span> final = <span class=\"pr\">«&#8239;a&#8239;»</span>.</li><li>Accent sur la première syllabe (sauf mots étrangers).</li><li>Majuscule à tous les noms et à <span class=\"de\">Sie</span> ; <span class=\"de\">ß</span> après voyelle longue, <span class=\"de\">ss</span> après voyelle courte.</li></ul>",
+     "debut": 4,
+     "fin": 6,
      "partie": null,
      "sections": [
       {
-       "titre": "Lire les approximations",
-       "page": 5
+       "titre": "Lire les approximations et l'accent",
+       "page": 4
       },
       {
        "titre": "L'alphabet",
-       "page": 5
+       "page": 4
       },
       {
        "titre": "Les voyelles : longues, courtes, Umlaut",
+       "page": 5
+      },
+      {
+       "titre": "Groupes de lettres et consonnes",
+       "page": 5
+      },
+      {
+       "titre": "Écrire : majuscules, ß et ss",
        "page": 6
-      },
-      {
-       "titre": "Combinaisons de lettres",
-       "page": 7
-      },
-      {
-       "titre": "Consonnes à surveiller",
-       "page": 7
-      },
-      {
-       "titre": "Mots dont la prononciation n'est pas intuitive",
-       "page": 8
-      },
-      {
-       "titre": "Écriture : majuscules, ß et ss",
-       "page": 8
       }
      ],
      "methodes": [
       {
        "num": "1.1",
        "titre": "Lire un mot inconnu",
-       "page": 8
+       "page": 5
       }
      ],
      "pdf": "docs/allemand-le-colle/chapitre-01.pdf"
     },
     {
      "n": 2,
-     "titre": "Les noms : genre, article, pluriel",
-     "intro": "En allemand, chaque nom a un genre (masculin, féminin ou neutre) que l'article rend visible, et un pluriel qu'il faut apprendre avec lui. Le genre ne suit pas celui du français, mais certaines terminaisons le trahissent.",
-     "objectifs": "<ul><li>Utiliser les articles défini et indéfini selon le genre.</li><li>Reconnaître le genre de quelques terminaisons.</li><li>Lire la notation du pluriel et former les pluriels.</li><li>Comprendre les noms composés.</li></ul>",
-     "prerequis": "Chapitre 1 (majuscule des noms).",
-     "essentiel": "<ul><li><span class=\"de\">der</span> (m.), <span class=\"de\">die</span> (f.), <span class=\"de\">das</span> (n.), <span class=\"de\">die</span> (pl.) ; indéfini <span class=\"de\">ein</span>, <span class=\"de\">eine</span>, <span class=\"de\">ein</span>, pas d'article au pluriel.</li><li><span class=\"de\">-in</span>, <span class=\"de\">-ung</span> : féminin ; <span class=\"de\">-um</span>, <span class=\"de\">-ium</span> : neutre.</li><li>Pluriels notés (-), (-e), (-er), (-n/-en), (-nen), (-s), (¨…) ; à apprendre avec le nom.</li><li>Nom composé : genre et pluriel du dernier élément.</li></ul>",
-     "debut": 10,
-     "fin": 11,
+     "titre": "Les noms et les verbes",
+     "intro": "Chaque nom allemand a un genre, que l'article rend visible, et un pluriel qu'il faut apprendre avec lui. Le verbe, lui, s'accorde avec son sujet par une terminaison : un seul modèle suffit pour presque tous les verbes, plus trois irréguliers à connaître par cœur.",
+     "objectifs": "<ul><li>Employer les articles selon le genre et former le pluriel.</li><li>Comprendre les noms composés.</li><li>Distinguer <span class=\"de\">sie</span>, <span class=\"de\">sie</span> et <span class=\"de\">Sie</span>.</li><li>Conjuguer au présent les verbes réguliers, <span class=\"de\">sein</span>, <span class=\"de\">haben</span> et <span class=\"de\">mögen</span>.</li></ul>",
+     "prerequis": "Chapitre 1.",
+     "essentiel": "<ul><li><span class=\"de\">der</span> (m.), <span class=\"de\">die</span> (f.), <span class=\"de\">das</span> (n.), <span class=\"de\">die</span> (pl.) ; <span class=\"de\">ein, eine, ein</span>, pas d'article au pluriel.</li><li>Pluriel à apprendre avec le nom ; nom composé : genre du dernier élément.</li><li>Terminaisons <span class=\"de\">-e, -st, -t, -en, -t, -en</span> ; <span class=\"de\">du arbeitest</span>, <span class=\"de\">du heißt</span>, <span class=\"de\">du sprichst / er spricht</span>.</li><li><span class=\"de\">sein</span> : bin, bist, ist, sind, seid, sind ; <span class=\"de\">haben</span> : habe, hast, hat, haben, habt, haben ; <span class=\"de\">mögen</span> : mag, magst, mag, mögen, mögt, mögen.</li><li><span class=\"de\">man</span> + 3<sup>e</sup> personne du singulier ; <span class=\"de\">sie ist</span> / <span class=\"de\">sie sind</span> / <span class=\"de\">Sie sind</span>.</li></ul>",
+     "debut": 7,
+     "fin": 9,
      "partie": null,
      "sections": [
       {
-       "titre": "Trois genres, un pluriel",
-       "page": 10
+       "titre": "Article et genre",
+       "page": 7
       },
       {
-       "titre": "Reconnaître le genre grâce à la terminaison",
-       "page": 10
+       "titre": "Le pluriel",
+       "page": 7
       },
       {
-       "titre": "Former le pluriel",
-       "page": 11
+       "titre": "Les noms composés",
+       "page": 8
       },
       {
-       "titre": "Les mots composés",
-       "page": 11
+       "titre": "Les pronoms sujets",
+       "page": 8
+      },
+      {
+       "titre": "Le présent des verbes réguliers",
+       "page": 8
+      },
+      {
+       "titre": "Trois verbes irréguliers et man",
+       "page": 9
       }
      ],
-     "methodes": [],
+     "methodes": [
+      {
+       "num": "2.1",
+       "titre": "Conjuguer un verbe au présent",
+       "page": 8
+      }
+     ],
      "pdf": "docs/allemand-le-colle/chapitre-02.pdf"
     },
     {
      "n": 3,
-     "titre": "Pronoms et conjugaison au présent",
-     "intro": "Le verbe allemand s'accorde avec son sujet par une terminaison ajoutée au radical. Un seul modèle suffit pour presque tous les verbes vus en classe ; il reste deux irréguliers essentiels, <span class=\"de\">sein</span> et <span class=\"de\">haben</span>.",
-     "objectifs": "<ul><li>Connaître les pronoms sujets et distinguer <span class=\"de\">sie</span>, <span class=\"de\">sie</span> et <span class=\"de\">Sie</span>.</li><li>Conjuguer les verbes réguliers et leurs trois particularités.</li><li>Conjuguer <span class=\"de\">sein</span> et <span class=\"de\">haben</span> ; employer <span class=\"de\">man</span>.</li></ul>",
-     "prerequis": "Chapitre 2 (genre des noms).",
-     "essentiel": "<ul><li><span class=\"de\">ich, du, er/sie/es, wir, ihr, sie/Sie</span> ; le verbe et la majuscule distinguent <span class=\"de\">sie</span> (elle), <span class=\"de\">sie</span> (ils), <span class=\"de\">Sie</span> (vous).</li><li>Terminaisons <span class=\"de\">-e, -st, -t, -en, -t, -en</span> ; <span class=\"de\">du arbeitest</span>, <span class=\"de\">du heißt</span>, <span class=\"de\">du sprichst / er spricht</span>.</li><li><span class=\"de\">sein</span> : bin, bist, ist, sind, seid, sind ; <span class=\"de\">haben</span> : habe, hast, hat, haben, habt, haben.</li><li><span class=\"de\">man</span> + 3<sup>e</sup> personne du singulier.</li></ul>",
-     "debut": 12,
-     "fin": 14,
+     "titre": "Construire une phrase",
+     "intro": "Ce qui structure la phrase allemande, c'est la <strong>place du verbe conjugué</strong> : en tête, en deuxième position ou à la fin selon le type de phrase. Le reste de l'ordre des mots en découle, y compris la place de la négation.",
+     "objectifs": "<ul><li>Placer le verbe conjugué selon le type de phrase.</li><li>Poser des questions fermées et ouvertes.</li><li>Donner un ordre (impératif) et une raison (<span class=\"de\">weil</span>).</li><li>Nier avec <span class=\"de\">nicht</span> ou <span class=\"de\">kein</span>.</li></ul>",
+     "prerequis": "Chapitre 2.",
+     "essentiel": "<ul><li>Verbe 1<sup>er</sup> : question oui/non, impératif ; 2<sup>e</sup> : déclarative, question en W- ; dernier : après <span class=\"de\">weil</span>, <span class=\"de\">dass</span>, <span class=\"de\">was</span>.</li><li>Autre élément que le sujet en tête ⇒ inversion : <span class=\"de\">Heute haben wir Montag.</span></li><li><span class=\"de\">wer, was, wie, wo, woher, wohin, wann, warum, wie alt, wie groß</span> ; <span class=\"de\">welcher / welche / welches</span>, <span class=\"de\">welchen</span> au COD masculin.</li><li><span class=\"de\">Warum …?</span> — <span class=\"de\">…, weil er krank ist.</span> (virgule, verbe à la fin).</li><li><span class=\"de\">kein</span> devant un nom sans article ou avec <span class=\"de\">ein</span> ; <span class=\"de\">nicht</span> ailleurs, en fin de phrase s'il nie tout.</li></ul>",
+     "debut": 10,
+     "fin": 12,
      "partie": null,
      "sections": [
       {
-       "titre": "Les pronoms personnels sujets",
-       "page": 12
+       "titre": "La place du verbe conjugué",
+       "page": 10
       },
       {
-       "titre": "Les verbes réguliers",
-       "page": 12
+       "titre": "Poser une question",
+       "page": 10
       },
       {
-       "titre": "Les deux verbes irréguliers essentiels",
-       "page": 13
+       "titre": "« Quel ? » : welcher",
+       "page": 11
       },
       {
-       "titre": "man = on",
-       "page": 13
+       "titre": "L'impératif",
+       "page": 11
+      },
+      {
+       "titre": "Donner une raison : weil",
+       "page": 11
+      },
+      {
+       "titre": "La négation",
+       "page": 11
       }
      ],
      "methodes": [
       {
        "num": "3.1",
-       "titre": "Conjuguer un verbe au présent",
-       "page": 13
+       "titre": "Répondre à « Warum? » avec weil",
+       "page": 11
+      },
+      {
+       "num": "3.2",
+       "titre": "Construire une phrase",
+       "page": 12
       }
      ],
      "pdf": "docs/allemand-le-colle/chapitre-03.pdf"
     },
     {
      "n": 4,
-     "titre": "Construire une phrase",
-     "intro": "Ce qui structure la phrase allemande, c'est la <strong>place du verbe conjugué</strong> : en tête, en deuxième position ou à la fin selon le type de phrase. Le reste de l'ordre des mots en découle.",
-     "objectifs": "<ul><li>Placer le verbe conjugué selon le type de phrase.</li><li>Poser des questions fermées et ouvertes (mots en W-, <span class=\"de\">welcher</span>).</li><li>Donner un ordre (impératif) et une raison (<span class=\"de\">weil</span>).</li></ul>",
-     "prerequis": "Chapitre 3.",
-     "essentiel": "<ul><li>Verbe 1<sup>er</sup> : question fermée, impératif ; 2<sup>e</sup> : déclarative, question en W- ; dernier : après <span class=\"de\">weil</span>.</li><li>Élément en tête autre que le sujet $\\Rightarrow$ inversion : <span class=\"de\">Heute haben wir Montag.</span></li><li><span class=\"de\">wer, was, wie, wo, woher, wohin, warum, wie alt, wie oft, wie viel, wie groß</span> ; <span class=\"de\">welcher/welche/welches</span>.</li><li>Âge avec <span class=\"de\">sein</span> ; virgule avant <span class=\"de\">weil</span>.</li></ul>",
-     "debut": 15,
-     "fin": 17,
+     "titre": "Les cas, la possession et les lieux",
+     "intro": "En allemand, l'article et le possessif changent selon la fonction du nom dans la phrase : c'est le système des <strong>cas</strong>. Trois cas ont été vus ; ils suffisent pour dire à qui appartient quelque chose, pour situer un lieu et pour dire comment va quelqu'un.",
+     "objectifs": "<ul><li>Reconnaître nominatif, accusatif et datif.</li><li>Choisir le bon possessif et sa terminaison.</li><li>Exprimer le possesseur (<span class=\"de\">Leos</span>, <span class=\"de\">von</span> + datif).</li><li>Situer et dire la provenance avec <span class=\"de\">in</span>, <span class=\"de\">an</span>, <span class=\"de\">aus</span>.</li></ul>",
+     "prerequis": "Chapitres 2 et 3.",
+     "essentiel": "<ul><li>Accusatif : seul le masculin change (<span class=\"de\">den, einen, meinen, keinen, welchen</span>).</li><li>Datif après <span class=\"de\">von, aus, mit</span> et <span class=\"de\">in / an</span> pour situer : <span class=\"de\">dem / der / dem / den</span>.</li><li>Possessif : le possesseur choisit le mot (<span class=\"de\">sein</span> / <span class=\"de\">ihr</span>), le nom possédé la terminaison ; <span class=\"de\">dein</span> ↔ <span class=\"de\">mein</span> dans les réponses.</li><li><span class=\"de\">Leos Bruder</span> (sans apostrophe) ou <span class=\"de\">der Bruder von Leo</span>.</li><li><span class=\"de\">im = in dem</span>, <span class=\"de\">am = an dem</span>, <span class=\"de\">vom = von dem</span> ; <span class=\"de\">aus</span> = provenance.</li></ul>",
+     "debut": 13,
+     "fin": 14,
      "partie": null,
      "sections": [
       {
-       "titre": "La place du verbe conjugué",
-       "page": 15
+       "titre": "Les trois cas",
+       "page": 13
       },
       {
-       "titre": "Poser une question",
-       "page": 16
+       "titre": "Les possessifs",
+       "page": 13
       },
       {
-       "titre": "« Quel ? » : welcher",
-       "page": 17
+       "titre": "Le possesseur : nom + s ou von + datif",
+       "page": 14
       },
       {
-       "titre": "L'impératif",
-       "page": 17
-      },
-      {
-       "titre": "Donner une raison : weil",
-       "page": 17
+       "titre": "Où ? D'où ? Où aller ?",
+       "page": 14
       }
      ],
      "methodes": [
       {
        "num": "4.1",
-       "titre": "Construire une phrase",
-       "page": 17
+       "titre": "Choisir le possessif",
+       "page": 13
       }
      ],
      "pdf": "docs/allemand-le-colle/chapitre-04.pdf"
     },
     {
      "n": 5,
-     "titre": "La négation",
-     "intro": "Pas de « ne … pas » en deux morceaux : un seul mot suffit. Toute la difficulté est de choisir entre <span class=\"de\">nicht</span> et <span class=\"de\">kein</span>.",
-     "objectifs": "<ul><li>Employer <span class=\"de\">nicht</span>, <span class=\"de\">kein</span>, <span class=\"de\">nichts</span>, <span class=\"de\">nie</span>, <span class=\"de\">noch nicht</span>.</li><li>Choisir entre <span class=\"de\">kein</span> et <span class=\"de\">nicht</span>.</li><li>Distinguer <span class=\"de\">schon</span> et <span class=\"de\">noch</span>.</li></ul>",
-     "prerequis": "Chapitres 2 et 4.",
-     "essentiel": "<ul><li><span class=\"de\">kein</span> devant un nom avec <span class=\"de\">ein</span> ou sans article ; <span class=\"de\">nicht</span> ailleurs.</li><li><span class=\"de\">kein / keine / keinen</span> comme <span class=\"de\">ein / eine / einen</span>.</li><li><span class=\"de\">nichts</span> (rien), <span class=\"de\">nie</span> (jamais), <span class=\"de\">noch nicht</span> (pas encore) ; <span class=\"de\">schon</span> (déjà), <span class=\"de\">noch</span> (encore).</li></ul>",
-     "debut": 18,
-     "fin": 19,
+     "titre": "Nombres, dates et temps",
+     "intro": "Les nombres allemands se lisent « à l'envers » : l'unité avant la dizaine, le tout en un seul mot. Avec les nombres ordinaux, on dit ensuite la date ; avec <span class=\"de\">am</span> et <span class=\"de\">im</span>, on situe un anniversaire dans l'année.",
+     "objectifs": "<ul><li>Compter et écrire un nombre en un mot ; lire une année.</li><li>Dire la date avec les jours, les mois et les ordinaux.</li><li>Choisir entre <span class=\"de\">am</span>, <span class=\"de\">im</span> et l'année seule.</li><li>Parler de sa naissance, de son âge et de son anniversaire.</li></ul>",
+     "prerequis": "Chapitre 1.",
+     "essentiel": "<ul><li>Unité + <span class=\"de\">und</span> + dizaine, en un mot : <span class=\"de\">vierundfünfzig</span> ; <span class=\"de\">einundzwanzig</span>, mais <span class=\"de\">eins</span> seul.</li><li><span class=\"de\">elf, zwölf, sechzehn, siebzehn, zwanzig, dreißig, sechzig, siebzig</span>.</li><li>Années : centaines jusqu'à 1999, milliers ensuite ; année seule, jamais <span class=\"de\">in 2006</span>.</li><li>Ordinaux : <span class=\"de\">-te</span> jusqu'à 19, <span class=\"de\">-ste</span> ensuite ; <span class=\"de\">erste, dritte, siebte, achte</span> ; <span class=\"de\">am ersten Juni</span>.</li><li><span class=\"de\">am</span> + date, <span class=\"de\">im</span> + mois ou saison ; jours, mois et saisons masculins.</li><li><span class=\"de\">geboren sein</span>, <span class=\"de\">gestorben sein</span>, <span class=\"de\">Ich bin 20 Jahre alt</span> ; <span class=\"de\">Er hat am 24. April Geburtstag</span>.</li></ul>",
+     "debut": 15,
+     "fin": 17,
      "partie": null,
-     "sections": [],
-     "methodes": [],
+     "sections": [
+      {
+       "titre": "Compter",
+       "page": 15
+      },
+      {
+       "titre": "Jours, mois, saisons",
+       "page": 16
+      },
+      {
+       "titre": "Les ordinaux et la date",
+       "page": 16
+      },
+      {
+       "titre": "Le temps qui passe",
+       "page": 16
+      },
+      {
+       "titre": "Naissance, âge, anniversaire",
+       "page": 17
+      }
+     ],
+     "methodes": [
+      {
+       "num": "5.1",
+       "titre": "Écrire un nombre en lettres",
+       "page": 15
+      },
+      {
+       "num": "5.2",
+       "titre": "Répondre à une question de date",
+       "page": 16
+      }
+     ],
      "pdf": "docs/allemand-le-colle/chapitre-05.pdf"
     },
     {
      "n": 6,
-     "titre": "Les cas, la possession et les prépositions de lieu",
-     "intro": "En allemand, l'article (et le possessif) change selon la <em>fonction</em> du nom dans la phrase : c'est le système des cas. Trois cas ont été rencontrés ; ils suffisent pour dire à qui appartient quelque chose et pour situer un lieu.",
-     "objectifs": "<ul><li>Reconnaître nominatif, accusatif, datif dans les articles et possessifs.</li><li>Choisir le bon possessif (<span class=\"de\">sein</span> ou <span class=\"de\">ihr</span>) et sa terminaison.</li><li>Exprimer le possesseur (nom + s, <span class=\"de\">von</span> + datif).</li><li>Situer, dire la provenance : <span class=\"de\">in</span>, <span class=\"de\">an</span>, <span class=\"de\">aus</span> + datif ; contractions.</li></ul>",
+     "titre": "Saluer, se présenter, présenter quelqu'un",
+     "intro": "Ce chapitre réunit les chapitres précédents dans la situation la plus fréquente : saluer, se présenter, puis parler d'un ami. Les phrases sont à apprendre telles quelles.",
+     "objectifs": "<ul><li>Saluer et prendre congé selon le moment, le registre et la région.</li><li>Poser les questions de présentation et y répondre.</li><li>Interroger quelqu'un sur son meilleur ami et le présenter à l'écrit.</li></ul>",
      "prerequis": "Chapitres 2 à 5.",
-     "essentiel": "<ul><li>Accusatif : seul le masculin change (<span class=\"de\">den, einen, meinen, keinen</span>).</li><li>Datif après <span class=\"de\">von, aus, mit</span>, et <span class=\"de\">in/an</span> pour situer : <span class=\"de\">dem/der/dem/den</span>, <span class=\"de\">einem/einer/einem</span>, <span class=\"de\">meinem/meiner/meinem/meinen</span>.</li><li>Possessif : le possesseur choisit le mot (<span class=\"de\">sein</span>/<span class=\"de\">ihr</span>), le nom possédé la terminaison.</li><li><span class=\"de\">Leos Bruder</span> (avant, sans apostrophe) ou <span class=\"de\">der Bruder von Leo</span> (après, datif).</li><li><span class=\"de\">im</span> = in dem, <span class=\"de\">am</span> = an dem, <span class=\"de\">vom</span> = von dem ; <span class=\"de\">aus</span> = provenance.</li></ul>",
-     "debut": 20,
-     "fin": 22,
+     "essentiel": "<ul><li><span class=\"de\">Hallo / Guten Morgen / Guten Tag / Guten Abend / Gute Nacht</span> ; <span class=\"de\">Tschüss / Auf Wiedersehen</span> ; <span class=\"de\">Servus, Grüß Gott</span> (Bavière, Autriche), <span class=\"de\">Grüezi</span> (Suisse) ; <span class=\"de\">Freut mich!</span></li><li><span class=\"de\">Ich heiße…, ich komme aus…, ich wohne in…, ich bin in… geboren, ich bin… Jahre alt.</span></li><li>Métier sans article ; <span class=\"de\">meinen besten Freund</span> au COD.</li><li><span class=\"de\">Wie heißt dein bester Freund? Wann hat er Geburtstag? Was mag er?</span> ; vouvoiement <span class=\"de\">Ihr</span>.</li></ul>",
+     "debut": 18,
+     "fin": 20,
      "partie": null,
      "sections": [
       {
-       "titre": "Repère : à quoi servent les cas ?",
-       "page": 20
+       "titre": "Saluer et prendre congé",
+       "page": 18
       },
       {
-       "titre": "Les déterminants possessifs",
-       "page": 21
+       "titre": "Se présenter",
+       "page": 18
       },
       {
-       "titre": "Le possesseur : nom + s ou von + datif",
-       "page": 21
+       "titre": "Parler de son meilleur ami",
+       "page": 19
       },
       {
-       "titre": "Localisation, provenance, destination",
-       "page": 22
+       "titre": "Textes modèles",
+       "page": 19
       }
      ],
      "methodes": [
       {
        "num": "6.1",
-       "titre": "Choisir le possessif",
-       "page": 21
+       "titre": "Présenter quelqu'un à l'écrit",
+       "page": 20
       }
      ],
      "pdf": "docs/allemand-le-colle/chapitre-06.pdf"
     },
     {
      "n": 7,
-     "titre": "Nombres, dates et temps",
-     "intro": "Les nombres allemands se lisent « à l'envers » : l'unité avant la dizaine, le tout en un seul mot. Une fois cette règle acquise, on sait écrire tous les nombres et les années ; les nombres ordinaux donnent ensuite la date complète. Le chapitre se termine par le vocabulaire du temps qui passe (année, saisons, heures) et celui de la naissance et de l'anniversaire.",
-     "objectifs": "<ul><li>Compter de 0 à 1000 et au-delà ; écrire un nombre en un mot.</li><li>Lire une année avant et après 2000.</li><li>Dire la date avec jours et mois ; former les nombres ordinaux.</li><li>Nommer les unités de temps, les saisons ; dire l'heure.</li><li>Parler de sa naissance, de son âge et de son anniversaire.</li></ul>",
-     "prerequis": "Chapitre 1.",
-     "essentiel": "<ul><li>Unité + <span class=\"de\">und</span> + dizaine, en un mot : <span class=\"de\">vierundfünfzig</span> ; <span class=\"de\">einundzwanzig</span> mais <span class=\"de\">eins</span> seul.</li><li><span class=\"de\">elf, zwölf, sechzehn, siebzehn, sechzig, siebzig, dreißig</span>.</li><li>Années : centaines jusqu'à 1999, milliers ensuite ; <span class=\"de\">im Jahr 1989</span> ou l'année seule.</li><li><span class=\"de\">Heute haben wir Montag, den 21. September.</span> ; <span class=\"de\">am 18. Januar</span>.</li><li>Ordinaux : <strong>-te</strong> jusqu'à 19, <strong>-ste</strong> ensuite ; <span class=\"de\">erste, dritte, siebte</span> ; <span class=\"de\">am ersten Juni</span>.</li><li><span class=\"de\">das Jahr, der Monat, der Tag, die Stunde</span> ; saisons masculines ; <span class=\"de\">Es ist vier Uhr fünfzehn.</span></li><li><span class=\"de\">geboren sein</span> ; <span class=\"de\">Ich bin 20 Jahre alt</span> ; <span class=\"de\">Er hat am 24. April Geburtstag.</span></li></ul>",
-     "debut": 23,
-     "fin": 26,
+     "titre": "Comment ça va ? Humeurs et préférences",
+     "intro": "Pour dire comment on va, l'allemand ne met pas la personne en sujet : il dit « ça va bien <em>à moi</em> ». Ce chapitre donne cette construction, le vocabulaire des sensations et des émotions, puis la façon de décrire une situation et de dire ce qu'on aime, en justifiant avec <span class=\"de\">weil</span>.",
+     "objectifs": "<ul><li>Demander et dire comment on va, avec <span class=\"de\">mir, dir, ihm, ihr</span>.</li><li>Dire qu'on a faim, soif, chaud ou froid.</li><li>Décrire une humeur ou une émotion et la justifier avec <span class=\"de\">weil</span>.</li><li>Dire quel jour on aime ou non, et pourquoi.</li></ul>",
+     "prerequis": "Chapitres 3 et 4.",
+     "essentiel": "<ul><li><span class=\"de\">Wie geht es dir / ihm / ihr / Ihnen?</span> — <span class=\"de\">Es geht mir gut</span> = <span class=\"de\">Mir geht's gut</span> ; <span class=\"de\">ich → mir</span>, <span class=\"de\">du → dir</span>, <span class=\"de\">er → ihm</span>, <span class=\"de\">sie → ihr</span>.</li><li>De <span class=\"de\">wunderbar</span> à <span class=\"de\">schlecht</span> ; <span class=\"de\">soso</span>, <span class=\"de\">es geht</span> = moyen.</li><li><span class=\"de\">Hunger / Durst / Angst haben</span> ; <span class=\"de\">müde, krank, froh, glücklich, traurig, böse, begeistert, gestresst sein</span>.</li><li><span class=\"de\">Mir ist kalt / warm / heiß</span>, jamais <span class=\"de\">ich bin kalt</span>.</li><li><span class=\"de\">Ich mag den Samstag, weil ich keine Schule habe.</span> — <span class=\"de\">Ich mag den Montag nicht.</span></li></ul>",
+     "debut": 21,
+     "fin": 23,
      "partie": null,
      "sections": [
       {
-       "titre": "De 0 à 20",
-       "page": 23
+       "titre": "Wie geht's?",
+       "page": 21
       },
       {
-       "titre": "Dizaines, cent, mille",
-       "page": 23
+       "titre": "Sensations : faim, soif, chaud, froid",
+       "page": 21
       },
       {
-       "titre": "Former un nombre",
-       "page": 24
+       "titre": "Émotions et santé",
+       "page": 22
       },
       {
-       "titre": "Lire une année",
-       "page": 24
-      },
-      {
-       "titre": "Jours, mois, date du jour",
-       "page": 24
-      },
-      {
-       "titre": "Les nombres ordinaux et la date complète",
-       "page": 25
-      },
-      {
-       "titre": "Le temps qui passe",
-       "page": 25
-      },
-      {
-       "titre": "Naissance, âge, anniversaire",
-       "page": 26
+       "titre": "Décrire une situation, dire ce qu'on aime",
+       "page": 22
       }
      ],
      "methodes": [
       {
        "num": "7.1",
-       "titre": "Écrire un nombre en lettres",
-       "page": 24
+       "titre": "Décrire l'humeur de quelqu'un et la justifier",
+       "page": 22
       }
      ],
      "pdf": "docs/allemand-le-colle/chapitre-07.pdf"
     },
     {
      "n": 8,
-     "titre": "Communiquer : saluer et se présenter",
-     "intro": "Ce chapitre réunit tout ce qui précède dans la situation la plus fréquente : saluer, se présenter, présenter quelqu'un. Les phrases sont à apprendre telles quelles.",
-     "objectifs": "<ul><li>Saluer et prendre congé selon le moment et le registre.</li><li>Poser et répondre aux questions de présentation.</li><li>Produire une courte présentation orale ou écrite.</li></ul>",
-     "prerequis": "Chapitres 3 à 7.",
-     "essentiel": "<ul><li><span class=\"de\">Hallo / Guten Morgen / Guten Tag / Guten Abend</span> ; <span class=\"de\">Tschüss / Auf Wiedersehen</span> ; <span class=\"de\">Freut mich!</span></li><li><span class=\"de\">Ich heiße…, ich komme aus…, ich wohne in…, ich bin in… geboren, ich bin… Jahre alt.</span></li><li>Métier sans article ; <span class=\"de\">geboren</span> avec <span class=\"de\">sein</span> ; <span class=\"de\">meinen besten Freund</span> au COD.</li><li>Parler de son meilleur ami : <span class=\"de\">Wie ist der Name deines besten Freundes?</span> ; vouvoiement <span class=\"de\">Ihr</span>, verbe accordé au sujet.</li></ul>",
-     "debut": 27,
-     "fin": 30,
-     "partie": null,
-     "sections": [
-      {
-       "titre": "Saluer et prendre congé",
-       "page": 27
-      },
-      {
-       "titre": "Se présenter : questions et réponses",
-       "page": 27
-      },
-      {
-       "titre": "Parler de son meilleur ami",
-       "page": 28
-      },
-      {
-       "titre": "Petits mots utiles",
-       "page": 29
-      }
-     ],
-     "methodes": [
-      {
-       "num": "8.1",
-       "titre": "Présenter quelqu'un (à l'écrit)",
-       "page": 28
-      }
-     ],
-     "pdf": "docs/allemand-le-colle/chapitre-08.pdf"
-    },
-    {
-     "n": 9,
      "titre": "Vocabulaire thématique",
-     "intro": "Le vocabulaire des séances, classé par thème. Chaque nom est donné avec son article et son pluriel.",
-     "objectifs": "<ul><li>Parler de ses études, de son métier, des langues.</li><li>Nommer l'entourage.</li><li>Situer une ville ou un pays ; connaître les pays voisins.</li><li>Vocabulaire de la vie quotidienne et des dates historiques.</li></ul>",
-     "prerequis": "Chapitres 2 et 6.",
-     "essentiel": "<ul><li>Études : <span class=\"de\">Ich studiere Elektronik</span> (sans article) ; langues avec majuscule et sans article.</li><li>Situer : <span class=\"de\">X liegt im Osten von…, an der Donau, in der Nähe von…, an der Grenze zu…</span></li><li><span class=\"de\">die Schweiz</span>, <span class=\"de\">die Niederlande</span>, <span class=\"de\">die Tschechische Republik</span> : avec article.</li><li><span class=\"de\">der See</span> (lac) / <span class=\"de\">die See</span> (mer) ; une ville se reprend par <span class=\"de\">es</span>.</li></ul>",
-     "debut": 31,
-     "fin": 37,
+     "intro": "Le vocabulaire des séances qui n'a pas trouvé sa place dans les chapitres précédents, classé par thème. Chaque nom est donné avec son article et son pluriel.",
+     "objectifs": "<ul><li>Parler de ses études, de son métier, des langues et de son entourage.</li><li>Situer une ville ou un pays ; nommer les pays voisins.</li><li>Connaître le vocabulaire de la vie quotidienne et des dates historiques.</li></ul>",
+     "prerequis": "Chapitres 2 et 4.",
+     "essentiel": "<ul><li><span class=\"de\">Ich studiere Elektronik</span> (sans article) ; langues avec majuscule et sans article.</li><li><span class=\"de\">X liegt im Osten von…, an der Donau, in der Nähe von…, an der Grenze zu…</span></li><li><span class=\"de\">die Schweiz</span>, <span class=\"de\">die Niederlande</span>, <span class=\"de\">die Tschechische Republik</span> : avec article.</li><li><span class=\"de\">der See</span> (lac) / <span class=\"de\">die See</span> (mer) ; une ville se reprend par <span class=\"de\">es</span>.</li></ul>",
+     "debut": 24,
+     "fin": 26,
      "partie": null,
      "sections": [
       {
-       "titre": "Études, métiers, langues",
-       "page": 31
-      },
-      {
-       "titre": "L'entourage",
-       "page": 32
+       "titre": "Études, métiers, langues, entourage",
+       "page": 24
       },
       {
        "titre": "Géographie : se situer",
-       "page": 33
-      },
-      {
-       "titre": "Pays et langues",
-       "page": 34
-      },
-      {
-       "titre": "Fiches de villes",
-       "page": 35
+       "page": 24
       },
       {
        "titre": "Vie quotidienne",
-       "page": 35
+       "page": 25
       },
       {
-       "titre": "Histoire : vocabulaire des dates",
-       "page": 36
+       "titre": "Histoire : dates et vocabulaire",
+       "page": 26
       }
      ],
      "methodes": [],
-     "pdf": "docs/allemand-le-colle/chapitre-09.pdf"
-    },
-    {
-     "n": 10,
-     "titre": "Textes modèles",
-     "intro": "Les textes produits et étudiés en séance, à relire comme modèles : ils réunissent dans des phrases complètes tout ce que les chapitres précédents ont présenté séparément.",
-     "objectifs": "<ul><li>Présenter un camarade à l'écrit (tutoiement et vouvoiement).</li><li>Comprendre un dialogue simple et repérer qui fait quoi.</li><li>Voir tout le cours réutilisé dans des phrases complètes.</li></ul>",
-     "prerequis": "Chapitres 1 à 9.",
-     "essentiel": "",
-     "debut": 38,
-     "fin": 40,
-     "partie": null,
-     "sections": [
-      {
-       "titre": "Présenter un camarade (à l'écrit)",
-       "page": 38
-      },
-      {
-       "titre": "Présenter son meilleur ami",
-       "page": 39
-      },
-      {
-       "titre": "Compréhension orale : Sarah, Dana et la professeure",
-       "page": 39
-      },
-      {
-       "titre": "Wer spricht ? Wer studiert ? (séance du 12 octobre)",
-       "page": 39
-      }
-     ],
-     "methodes": [],
-     "pdf": "docs/allemand-le-colle/chapitre-10.pdf"
-    },
-    {
-     "n": 11,
-     "titre": "Fiche récapitulative",
-     "intro": "À relire avant chaque séance : les phrases modèles, la place du verbe et les pièges fréquents.",
-     "objectifs": "",
-     "prerequis": "",
-     "essentiel": "",
-     "debut": 41,
-     "fin": 42,
-     "partie": null,
-     "sections": [
-      {
-       "titre": "Phrases modèles",
-       "page": 41
-      },
-      {
-       "titre": "La place du verbe",
-       "page": 41
-      },
-      {
-       "titre": "Les tableaux à savoir",
-       "page": 41
-      },
-      {
-       "titre": "Pièges fréquents",
-       "page": 42
-      }
-     ],
-     "methodes": [],
-     "pdf": "docs/allemand-le-colle/chapitre-11.pdf"
+     "pdf": "docs/allemand-le-colle/chapitre-08.pdf"
     }
    ]
   }
