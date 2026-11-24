@@ -1508,6 +1508,125 @@ window.LC = {
    ]
   },
   {
+   "id": "be-eros",
+   "matiere": "numerique",
+   "titre": "BE EROS : programmer un processeur en assembleur",
+   "description": "Carnet de bureau d'études : langage machine et assembleur, micro-instructions, modes d'adressage, premiers programmes, puis entrées/sorties et pilotage de PINGOO. Programmes vérifiés sur simulateur.",
+   "pages": 17,
+   "pdf": "docs/be-eros.pdf",
+   "fiche": null,
+   "chapitres": [
+    {
+     "n": 1,
+     "titre": "Ce qu'il faut savoir d'EROS",
+     "intro": "Avant le sujet, l'essentiel de la documentation fournie (structure, jeu d'instructions, UAL, application et panneau de contrôle), réduit à ce qui sert pendant le BE.",
+     "objectifs": "<ul><li>Lire et écrire le code d'une instruction.</li><li>Situer programme, données et entrées/sorties en mémoire.</li><li>Connaître le cycle de recherche d'une instruction.</li></ul>",
+     "prerequis": "Binaire et hexadécimal.",
+     "essentiel": "<ul><li>Instruction = 2 octets (CO 7 bits, SD, SA, SB 3 bits chacun) + 1 octet d'opérande éventuel ; 1<sup>er</sup> octet $=2\\,\\text{CO}+\\text{bit fort de SD}$.</li><li>Mémoire 00 à EF ; entrées/sorties F0 à FF : PINGOO en FA à FD, afficheur FE, boutons FF.</li><li>Recherche d'une instruction : 4 micro-instructions (T0 à T3), puis l'exécution à partir de T4.</li></ul>",
+     "debut": 3,
+     "fin": 5,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Le format des instructions",
+       "page": 3
+      },
+      {
+       "titre": "La mémoire et les entrées/sorties",
+       "page": 3
+      },
+      {
+       "titre": "Le cycle d'une instruction",
+       "page": 4
+      },
+      {
+       "titre": "Écrire un programme",
+       "page": 4
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-01.pdf"
+    },
+    {
+     "n": 2,
+     "titre": "Séance 1 : préparation",
+     "intro": "Deux exercices de traduction, dans les deux sens, entre le contenu de la mémoire et l'assembleur.",
+     "objectifs": "<ul><li>Décoder un contenu mémoire en instructions.</li><li>Coder des instructions en langage machine.</li></ul>",
+     "prerequis": "Chapitre 1.",
+     "essentiel": "<ul><li>Décoder : binaire, découpage 7 + 3 + 3 + 3, le CO dit s'il y a un 3<sup>e</sup> octet.</li><li>Ex. 1 : <code>move r0,#50 ; move r1,#05 ; add r2,r1,r0 ; move r3,r2 ; hlt</code>.</li><li>Ex. 2 : <code>08 40 C3 0E C8 02 18 C0 10 0B 01 00 A0 4C 00</code>.</li></ul>",
+     "debut": 6,
+     "fin": 7,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Les étapes",
+       "page": 6
+      },
+      {
+       "titre": "Pièges",
+       "page": 7
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-02.pdf"
+    },
+    {
+     "n": 3,
+     "titre": "Séance 1 : manipulation",
+     "intro": "On exécute le programme de l'exercice 2 en pas à pas, puis on étudie les adressages indirects et on écrit les premiers programmes avec des branchements.",
+     "objectifs": "<ul><li>Détailler les micro-instructions de chaque instruction.</li><li>Reconnaître les cinq modes d'adressage.</li><li>Écrire des boucles avec <code>bra</code>, <code>beq</code>, <code>bne</code>.</li></ul>",
+     "prerequis": "Chapitre 2.",
+     "essentiel": "<ul><li>Recherche T0 à T3 ; immédiat +2 micro-instructions ; absolu +3 ; registre +1.</li><li>Indirect : adresse dans un registre <code>(r0)</code> ; indexé : base + déplacement <code>r0(r1)</code>.</li><li>Boucles : un registre de comparaison et <code>beq</code>/<code>bne</code>, ou un indicateur et <code>bz</code>/<code>bnz</code>.</li></ul>",
+     "debut": 8,
+     "fin": 11,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Le séquencement des instructions",
+       "page": 8
+      },
+      {
+       "titre": "Les adressages indirects",
+       "page": 9
+      },
+      {
+       "titre": "Les premiers programmes",
+       "page": 9
+      },
+      {
+       "titre": "Pièges",
+       "page": 10
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-03.pdf"
+    },
+    {
+     "n": 4,
+     "titre": "Séance 2 : entrées/sorties et PINGOO",
+     "intro": "Le processeur pilote maintenant le monde extérieur : il lit les boutons et les capteurs, écrit sur l'afficheur et commande PINGOO, toujours par de simples lectures et écritures en mémoire.",
+     "objectifs": "<ul><li>Lire et écrire des entrées/sorties en mémoire.</li><li>Isoler un bit avec un masque.</li><li>Se synchroniser sur un événement (attente d'un front).</li></ul>",
+     "prerequis": "Chapitres 1 à 3.",
+     "essentiel": "<ul><li>Entrées/sorties = cases mémoire : <code>move r0,ff</code> lit les boutons, <code>move fe,r0</code> écrit l'afficheur.</li><li>Masque + <code>and</code> pour isoler un bit, puis <code>bz</code>/<code>bnz</code>.</li><li>Scrutation : la réactivité dépend de la durée de la boucle, donc de l'horloge.</li><li>Compter des événements : attendre le passage à 1 <em>puis</em> le retour à 0.</li><li>Tableau en mémoire : base + index avec <code>move rD,rA(rB)</code>.</li></ul>",
+     "debut": 12,
+     "fin": 17,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Les étapes",
+       "page": 12
+      },
+      {
+       "titre": "Pièges",
+       "page": 16
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-04.pdf"
+    }
+   ]
+  },
+  {
    "id": "raffinage-algorithme",
    "matiere": "numerique",
    "titre": "Du raffinage à l'algorithme",

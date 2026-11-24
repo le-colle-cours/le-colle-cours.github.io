@@ -29,6 +29,8 @@ LIVRES = [
      "Algèbre de Boole, codage, logique CMOS, circuits combinatoires et séquentiels, mémoires et composants programmables, et le cours appliqué au BE (armoire à vidéoprojecteurs)."),
     (14, 'be-logique-armoire', 'numerique', "BE de logique : l'armoire à vidéoprojecteurs",
      "Compte rendu illustré des séances 1 et 2 (MA7, MCV), préparation des séances 3 à 6 (MD20, MA20, MCC, chef d'orchestre) et brouillon de la fiche de synthèse."),
+    (15, 'be-eros', 'numerique', "BE EROS : programmer un processeur en assembleur",
+     "Carnet de bureau d'études : langage machine et assembleur, micro-instructions, modes d'adressage, premiers programmes, puis entrées/sorties et pilotage de PINGOO. Programmes vérifiés sur simulateur."),
     (10, 'architecture-assembleur', 'numerique', 'Architecture et programmation en assembleur',
      "Codage, architecture de Von Neumann, processeur EROS et micro-instructions, modes d'adressage, mémoire et décodage, interfaçage, interruptions."),
     (3, 'raffinage-algorithme', 'numerique', "Du raffinage à l'algorithme",
