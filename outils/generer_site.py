@@ -48,7 +48,7 @@ LIVRES = [
     (13, 'probabilites', 'maths', "Probabilités",
      "Espaces de probabilité, variables et vecteurs aléatoires, lois usuelles, fonction caractéristique, théorèmes limites."),
     (7, 'allemand-le-colle', 'langues', 'Allemand',
-     "Lire et écrire, noms et verbes, phrase et négation, cas et lieux, nombres et dates, se présenter, humeurs et préférences, vocabulaire."),
+     "Lire et écrire, noms et verbes, phrase et négation, cas et lieux, nombres et dates, se présenter, humeurs et préférences, vocabulaire, lexique complet allemand–français ; tout est traduit."),
 ]
 
 # ------------------------------------------------------------------ lecture LaTeX
@@ -96,8 +96,24 @@ REMPL = [(r'\ldots', '…'), (r'\dots', '…'), (r'\S', '§'), (r'\textcopyright
          (r'\og', '«'), (r'\fg', '»'), (r'\-', ''), (r'\newline', '<br>'), (r'\xor', '⊕'), (r'\'', "'")]
 
 
+def deplier_df(s):
+    """\\df{allemand}{traduction} -> \\de{allemand}\\ \\fr{traduction} (livre d'allemand)."""
+    def arg(i):
+        d, j = 1, i + 1
+        while d and j < len(s):
+            d += {'{': 1, '}': -1}.get(s[j], 0); j += 1
+        return s[i + 1:j - 1], j
+    while True:
+        k = s.find('\\df{')
+        if k < 0:
+            return s
+        a, j = arg(k + 3)
+        b, j = arg(j) if j < len(s) and s[j] == '{' else ('', j)
+        s = s[:k] + '\\de{' + a + '}' + (' \\fr{' + b + '}' if b else '') + s[j:]
+
+
 def texte(s, L, avertir):
-    s = sans_commentaires(s)
+    s = deplier_df(sans_commentaires(s))
     morceaux, pos, out = [], 0, []
     for m in MATH.finditer(s):
         out.append(('t', s[pos:m.start()])); out.append(('m', m.group(0))); pos = m.end()
