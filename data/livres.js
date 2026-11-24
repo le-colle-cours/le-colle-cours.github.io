@@ -3114,7 +3114,7 @@ window.LC = {
    "matiere": "langues",
    "titre": "Allemand",
    "description": "Lire et écrire, noms et verbes, phrase et négation, cas et lieux, nombres et dates, se présenter, humeurs et préférences, vocabulaire, lexique complet allemand–français ; tout est traduit.",
-   "pages": 48,
+   "pages": 39,
    "pdf": "docs/allemand-le-colle.pdf",
    "fiche": "docs/allemand-le-colle/fiche-revision.pdf",
    "chapitres": [
@@ -3122,11 +3122,11 @@ window.LC = {
      "n": 1,
      "titre": "Lire et écrire l'allemand",
      "intro": "L'allemand se lit presque toujours comme il s'écrit : une fois les correspondances entre lettres et sons connues, on sait prononcer n'importe quel mot. Quelques sons n'existent pas en français et demandent un peu d'entraînement. Chaque mot d'exemple est traduit, pour apprendre le vocabulaire en même temps que la prononciation.",
-     "objectifs": "<ul><li>Lire les approximations de prononciation du livre.</li><li>Épeler avec l'alphabet allemand.</li><li>Prononcer voyelles, Umlaut, groupes de lettres et consonnes particulières.</li><li>Écrire correctement : majuscules, <span class=\"de\">ß</span> ou <span class=\"de\">ss</span>.</li></ul>",
-     "prerequis": "Aucun.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li>ei = <span class=\"pr\">«&#8239;aï&#8239;»</span>, ie = <span class=\"pr\">«&#8239;i&#8239;»</span>, eu/äu = <span class=\"pr\">«&#8239;oï&#8239;»</span>, sch = <span class=\"pr\">«&#8239;ch&#8239;»</span>, z = <span class=\"pr\">«&#8239;ts&#8239;»</span>, w = <span class=\"pr\">«&#8239;v&#8239;»</span>, v = <span class=\"pr\">«&#8239;f&#8239;»</span>, j = <span class=\"pr\">«&#8239;y&#8239;»</span>, sp/st initial = <span class=\"pr\">«&#8239;chp/cht&#8239;»</span>.</li><li>ch : <span class=\"pr\">«&#8239;kh&#8239;»</span> après a, o, u, au ; <span class=\"pr\">«&#8239;ç&#8239;»</span> ailleurs ; jamais le « ch » français.</li><li>Pas de nasales, tout se prononce ; b, d, g finaux durcis ; -er final = <span class=\"pr\">«&#8239;a&#8239;»</span>.</li><li>Accent sur la première syllabe (sauf mots étrangers).</li><li>Majuscule à tous les noms et à <span class=\"de\">Sie</span> ; ß après voyelle longue, ss après voyelle courte.</li></ul>",
      "debut": 5,
-     "fin": 9,
+     "fin": 7,
      "partie": null,
      "sections": [
       {
@@ -3139,19 +3139,15 @@ window.LC = {
       },
       {
        "titre": "Les voyelles : longues, courtes, Umlaut",
-       "page": 6
+       "page": 5
       },
       {
        "titre": "Groupes de lettres et consonnes",
-       "page": 7
-      },
-      {
-       "titre": "Mots dont la prononciation n'est pas intuitive",
-       "page": 8
+       "page": 6
       },
       {
        "titre": "Écrire : majuscules, ß et ss",
-       "page": 8
+       "page": 7
       }
      ],
      "methodes": [
@@ -3167,36 +3163,36 @@ window.LC = {
      "n": 2,
      "titre": "Les noms et les verbes",
      "intro": "Chaque nom allemand a un genre, que l'article rend visible, et un pluriel qu'il faut apprendre avec lui. Le verbe, lui, s'accorde avec son sujet par une terminaison : un seul modèle suffit pour presque tous les verbes, plus trois irréguliers à connaître par cœur.",
-     "objectifs": "<ul><li>Employer les articles selon le genre et former le pluriel.</li><li>Comprendre les noms composés.</li><li>Distinguer <span class=\"de\">sie</span>, <span class=\"de\">sie</span> et <span class=\"de\">Sie</span>.</li><li>Conjuguer au présent les verbes réguliers, <span class=\"de\">sein</span>, <span class=\"de\">haben</span> et <span class=\"de\">mögen</span>.</li></ul>",
-     "prerequis": "Chapitre 1.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li><span class=\"de\">der</span> (m.), <span class=\"de\">die</span> (f.), <span class=\"de\">das</span> (n.), <span class=\"de\">die</span> (pl.) ; <span class=\"de\">ein</span>, <span class=\"de\">eine</span>, <span class=\"de\">ein</span>, pas d'article au pluriel.</li><li>Pluriel à apprendre avec le nom ; nom composé : genre du dernier élément.</li><li>Terminaisons -e, -st, -t, -en, -t, -en ; <span class=\"de\">du arbeitest</span>, <span class=\"de\">du heißt</span>, <span class=\"de\">du sprichst / er spricht</span>.</li><li><span class=\"de\">sein</span> : bin, bist, ist, sind, seid, sind ; <span class=\"de\">haben</span> : habe, hast, hat, haben, habt, haben ; <span class=\"de\">mögen</span> : mag, magst, mag, mögen, mögt, mögen.</li><li><span class=\"de\">man</span> + 3<sup>e</sup> personne du singulier ; <span class=\"de\">sie ist</span> / <span class=\"de\">sie sind</span> / <span class=\"de\">Sie sind</span>.</li></ul>",
-     "debut": 10,
-     "fin": 13,
+     "debut": 8,
+     "fin": 11,
      "partie": null,
      "sections": [
       {
        "titre": "Article et genre",
-       "page": 10
+       "page": 8
       },
       {
        "titre": "Le pluriel",
-       "page": 10
+       "page": 9
       },
       {
        "titre": "Les noms composés",
-       "page": 11
+       "page": 9
       },
       {
        "titre": "Les pronoms sujets",
-       "page": 11
+       "page": 10
       },
       {
        "titre": "Le présent des verbes réguliers",
-       "page": 12
+       "page": 10
       },
       {
        "titre": "Trois verbes irréguliers et man",
-       "page": 13
+       "page": 11
       }
      ],
      "methodes": [],
@@ -3206,36 +3202,36 @@ window.LC = {
      "n": 3,
      "titre": "Construire une phrase",
      "intro": "Ce qui structure la phrase allemande, c'est la place du verbe conjugué : en tête, en deuxième position ou à la fin selon le type de phrase. Le reste de l'ordre des mots en découle, y compris la place de la négation.",
-     "objectifs": "<ul><li>Placer le verbe conjugué selon le type de phrase.</li><li>Poser des questions fermées et ouvertes.</li><li>Donner un ordre (impératif) et une raison (<span class=\"de\">weil</span>).</li><li>Nier avec <span class=\"de\">nicht</span> ou <span class=\"de\">kein</span>.</li></ul>",
-     "prerequis": "Chapitre 2.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li>Verbe 1<sup>er</sup> : question oui/non, impératif ; 2<sup>e</sup> : déclarative, question en W- ; dernier : après <span class=\"de\">weil</span>, <span class=\"de\">dass</span>, <span class=\"de\">was</span>.</li><li>Autre élément que le sujet en tête $\\Rightarrow$ inversion : <span class=\"de\">Heute haben wir Montag.</span> <em class=\"fr\">Aujourd'hui, nous sommes lundi.</em></li><li><span class=\"de\">wer, was, wie, wo, woher, wohin, wann, warum, wie alt, wie groß, wie oft, wie viel</span> ; <span class=\"de\">welcher / welche / welches</span>, <span class=\"de\">welchen</span> au COD masculin.</li><li><span class=\"de\">Warum…? — …, weil er krank ist.</span> <em class=\"fr\">Pourquoi… ? — … parce qu'il est malade.</em> (virgule, verbe à la fin).</li><li><span class=\"de\">kein</span> devant un nom sans article ou avec <span class=\"de\">ein</span> ; <span class=\"de\">nicht</span> ailleurs, en fin de phrase s'il nie tout.</li></ul>",
-     "debut": 14,
-     "fin": 17,
+     "debut": 12,
+     "fin": 14,
      "partie": null,
      "sections": [
       {
        "titre": "La place du verbe conjugué",
-       "page": 14
+       "page": 12
       },
       {
        "titre": "Poser une question",
-       "page": 15
+       "page": 12
       },
       {
        "titre": "« Quel ? » : welcher",
-       "page": 15
+       "page": 13
       },
       {
        "titre": "L'impératif",
-       "page": 16
+       "page": 14
       },
       {
        "titre": "Donner une raison : weil",
-       "page": 16
+       "page": 14
       },
       {
        "titre": "La négation",
-       "page": 16
+       "page": 14
       }
      ],
      "methodes": [
@@ -3251,28 +3247,28 @@ window.LC = {
      "n": 4,
      "titre": "Les cas, la possession et les lieux",
      "intro": "En allemand, l'article et le possessif changent selon la <em>fonction</em> du nom dans la phrase : c'est le système des cas. Trois cas ont été vus ; ils suffisent pour dire à qui appartient quelque chose, pour situer un lieu et pour dire comment va quelqu'un.",
-     "objectifs": "<ul><li>Reconnaître nominatif, accusatif et datif.</li><li>Choisir le bon possessif et sa terminaison.</li><li>Exprimer le possesseur (<span class=\"de\">Leos</span>, <span class=\"de\">von</span> + datif).</li><li>Situer et dire la provenance avec <span class=\"de\">in</span>, <span class=\"de\">an</span>, <span class=\"de\">aus</span>.</li></ul>",
-     "prerequis": "Chapitres 2 et 4.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li>Accusatif : seul le masculin change (<span class=\"de\">den, einen, meinen, keinen, welchen</span>).</li><li>Datif après <span class=\"de\">von, aus, mit</span> et <span class=\"de\">in / an</span> pour situer : <span class=\"de\">dem / der / dem / den</span>.</li><li>Possessif : le possesseur choisit le mot (<span class=\"de\">sein</span> / <span class=\"de\">ihr</span>), le nom possédé la terminaison ; <span class=\"de\">dein</span> $\\leftrightarrow$ <span class=\"de\">mein</span> dans les réponses.</li><li><span class=\"de\">Leos Bruder</span> <em class=\"fr\">le frère de Leo</em> (sans apostrophe) ou <span class=\"de\">der Bruder von Leo</span> <em class=\"fr\">le frère de Leo</em>.</li><li><span class=\"de\">im</span> = in dem, <span class=\"de\">am</span> = an dem, <span class=\"de\">vom</span> = von dem ; <span class=\"de\">aus</span> = provenance.</li></ul>",
-     "debut": 18,
-     "fin": 20,
+     "debut": 15,
+     "fin": 17,
      "partie": null,
      "sections": [
       {
        "titre": "Les trois cas",
-       "page": 18
+       "page": 15
       },
       {
        "titre": "Les possessifs",
-       "page": 19
+       "page": 16
       },
       {
        "titre": "Le possesseur : nom + s ou von + datif",
-       "page": 19
+       "page": 17
       },
       {
        "titre": "Où ? D'où ? Où aller ?",
-       "page": 19
+       "page": 17
       }
      ],
      "methodes": [
@@ -3288,32 +3284,32 @@ window.LC = {
      "n": 5,
      "titre": "Nombres, dates et temps",
      "intro": "Les nombres allemands se lisent « à l'envers » : l'unité avant la dizaine, le tout en un seul mot. Avec les nombres ordinaux, on dit ensuite la date ; avec <span class=\"de\">am</span> et <span class=\"de\">im</span>, on situe un anniversaire dans l'année.",
-     "objectifs": "<ul><li>Compter et écrire un nombre en un mot ; lire une année.</li><li>Dire la date avec les jours, les mois et les ordinaux.</li><li>Choisir entre <span class=\"de\">am</span>, <span class=\"de\">im</span> et l'année seule.</li><li>Parler de sa naissance, de son âge et de son anniversaire.</li></ul>",
-     "prerequis": "Chapitre 1.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li>Unité + <span class=\"de\">und</span> + dizaine, en un mot : <span class=\"de\">vierundfünfzig</span> ; <span class=\"de\">einundzwanzig</span>, mais <span class=\"de\">eins</span> seul.</li><li><span class=\"de\">elf, zwölf, sechzehn, siebzehn, zwanzig, dreißig, sechzig, siebzig</span>.</li><li>Années : centaines jusqu'à 1999, milliers ensuite ; année seule, jamais <em>in 2006</em>.</li><li>Ordinaux : -te jusqu'à 19, -ste ensuite ; <span class=\"de\">erste, dritte, siebte, achte</span> ; <span class=\"de\">am ersten Juni</span> <em class=\"fr\">le premier juin</em>.</li><li><span class=\"de\">am</span> + date, <span class=\"de\">im</span> + mois ou saison ; jours, mois et saisons masculins.</li><li><span class=\"de\">geboren sein</span>, <span class=\"de\">gestorben sein</span>, <span class=\"de\">Ich bin 20 Jahre alt</span> <em class=\"fr\">j'ai 20 ans</em> ; <span class=\"de\">Er hat am 24. April Geburtstag.</span> <em class=\"fr\">Son anniversaire est le 24 avril.</em></li></ul>",
-     "debut": 21,
-     "fin": 25,
+     "debut": 18,
+     "fin": 22,
      "partie": null,
      "sections": [
       {
        "titre": "Compter",
-       "page": 21
+       "page": 19
       },
       {
        "titre": "Jours, mois, saisons",
-       "page": 22
+       "page": 20
       },
       {
        "titre": "Les ordinaux et la date",
-       "page": 22
+       "page": 20
       },
       {
        "titre": "Le temps qui passe",
-       "page": 23
+       "page": 21
       },
       {
        "titre": "Naissance, âge, anniversaire",
-       "page": 24
+       "page": 21
       }
      ],
      "methodes": [],
@@ -3323,32 +3319,32 @@ window.LC = {
      "n": 6,
      "titre": "Saluer, se présenter, présenter quelqu'un",
      "intro": "Ce chapitre réunit les chapitres précédents dans la situation la plus fréquente : saluer, se présenter, puis parler d'un ami. Les phrases sont à apprendre telles quelles ; chacune est traduite.",
-     "objectifs": "<ul><li>Saluer et prendre congé selon le moment, le registre et la région.</li><li>Poser les questions de présentation et y répondre.</li><li>Interroger quelqu'un sur son meilleur ami et le présenter à l'écrit.</li><li>Comprendre les textes étudiés en séance.</li></ul>",
-     "prerequis": "Chapitres 2 à 7.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li><span class=\"de\">Hallo / Guten Morgen / Guten Tag / Guten Abend / Gute Nacht</span> ; <span class=\"de\">Tschüss / Auf Wiedersehen</span> ; <span class=\"de\">Servus</span>, <span class=\"de\">Grüß Gott</span> (Bavière, Autriche), <span class=\"de\">Grüezi</span> (Suisse) ; <span class=\"de\">Freut mich!</span> <em class=\"fr\">Enchanté !</em></li><li><span class=\"de\">Ich heiße…, ich komme aus…, ich wohne in…, ich bin in… geboren, ich bin… Jahre alt.</span> <em class=\"fr\">Je m'appelle…, je viens de…, j'habite à…, je suis né à…, j'ai… ans.</em></li><li>Métier sans article ; <span class=\"de\">meinen besten Freund</span> au COD.</li><li><span class=\"de\">Wie heißt dein bester Freund? Wann hat er Geburtstag? Was mag er?</span> <em class=\"fr\">Comment s'appelle ton meilleur ami ? Quand est son anniversaire ? Qu'aime-t-il ?</em> ; vouvoiement <span class=\"de\">Ihr</span>.</li></ul>",
-     "debut": 26,
-     "fin": 31,
+     "debut": 23,
+     "fin": 26,
      "partie": null,
      "sections": [
       {
        "titre": "Saluer et prendre congé",
-       "page": 26
+       "page": 23
       },
       {
        "titre": "Se présenter",
-       "page": 26
+       "page": 23
       },
       {
        "titre": "Parler de son meilleur ami",
-       "page": 27
+       "page": 24
       },
       {
        "titre": "Textes modèles",
-       "page": 29
+       "page": 25
       },
       {
        "titre": "Textes étudiés en séance",
-       "page": 29
+       "page": 26
       }
      ],
      "methodes": [
@@ -3364,28 +3360,28 @@ window.LC = {
      "n": 7,
      "titre": "Comment ça va ? Humeurs et préférences",
      "intro": "Pour dire comment on va, l'allemand ne met pas la personne en sujet : il dit « ça va bien à moi ». Ce chapitre donne cette construction, le vocabulaire des sensations et des émotions, puis la façon de décrire une situation et de dire ce qu'on aime, en justifiant avec <span class=\"de\">weil</span>.",
-     "objectifs": "<ul><li>Demander et dire comment on va, avec <span class=\"de\">mir</span>, <span class=\"de\">dir</span>, <span class=\"de\">ihm</span>, <span class=\"de\">ihr</span>.</li><li>Dire qu'on a faim, soif, chaud ou froid.</li><li>Décrire une humeur ou une émotion et la justifier avec <span class=\"de\">weil</span>.</li><li>Dire quel jour on aime ou non, et pourquoi.</li></ul>",
-     "prerequis": "Chapitres 4 et 6.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li><span class=\"de\">Wie geht es dir / ihm / ihr / Ihnen?</span> <em class=\"fr\">Comment vas-tu / va-t-il / va-t-elle / allez-vous ?</em> — <span class=\"de\">Es geht mir gut = Mir geht's gut.</span> <em class=\"fr\">Je vais bien.</em> ; <span class=\"de\">ich</span> $\\to$ <span class=\"de\">mir</span>, <span class=\"de\">du</span> $\\to$ <span class=\"de\">dir</span>, <span class=\"de\">er</span> $\\to$ <span class=\"de\">ihm</span>, <span class=\"de\">sie</span> $\\to$ <span class=\"de\">ihr</span>.</li><li>De <span class=\"de\">wunderbar</span> à <span class=\"de\">schlecht</span> ; <span class=\"de\">soso</span>, <span class=\"de\">es geht</span> = moyen.</li><li><span class=\"de\">Hunger / Durst / Angst haben</span> ; <span class=\"de\">müde, krank, froh, glücklich, traurig, böse, begeistert, gestresst sein</span>.</li><li><span class=\"de\">Mir ist kalt / warm / heiß</span> <em class=\"fr\">j'ai froid / chaud / très chaud</em>, jamais <span class=\"de\">ich bin kalt</span>.</li><li><span class=\"de\">Ich mag den Samstag, weil ich keine Schule habe.</span> <em class=\"fr\">J'aime le samedi parce que je n'ai pas cours.</em> — <span class=\"de\">Ich mag den Montag nicht.</span> <em class=\"fr\">Je n'aime pas le lundi.</em></li></ul>",
-     "debut": 32,
-     "fin": 34,
+     "debut": 27,
+     "fin": 29,
      "partie": null,
      "sections": [
       {
        "titre": "Wie geht's?",
-       "page": 32
+       "page": 27
       },
       {
        "titre": "Sensations : faim, soif, chaud, froid",
-       "page": 33
+       "page": 28
       },
       {
        "titre": "Émotions et santé",
-       "page": 33
+       "page": 28
       },
       {
        "titre": "Décrire une situation, dire ce qu'on aime",
-       "page": 33
+       "page": 29
       }
      ],
      "methodes": [
@@ -3401,28 +3397,28 @@ window.LC = {
      "n": 8,
      "titre": "Vocabulaire thématique",
      "intro": "Le vocabulaire des séances qui n'a pas trouvé sa place dans les chapitres précédents, classé par thème. Chaque nom est donné avec son article, son pluriel et sa traduction ; chaque phrase est traduite.",
-     "objectifs": "<ul><li>Parler de ses études, de son métier, des langues et de son entourage.</li><li>Situer une ville ou un pays ; nommer les pays voisins.</li><li>Connaître le vocabulaire de la vie quotidienne et des dates historiques.</li></ul>",
-     "prerequis": "Chapitres 2 et 6.",
+     "objectifs": "",
+     "prerequis": "",
      "essentiel": "<ul><li><span class=\"de\">Ich studiere Elektronik.</span> <em class=\"fr\">J'étudie l'électronique.</em> (sans article) ; langues avec majuscule et sans article.</li><li><span class=\"de\">X liegt im Osten von…, an der Donau, in der Nähe von…, an der Grenze zu…</span> <em class=\"fr\">X se trouve à l'est de…, sur le Danube, près de…, à la frontière avec…</em></li><li><span class=\"de\">die Schweiz</span>, <span class=\"de\">die Niederlande</span>, <span class=\"de\">die Tschechische Republik</span> : avec article.</li><li><span class=\"de\">der See</span> (lac) / <span class=\"de\">die See</span> (mer) ; une ville se reprend par <span class=\"de\">es</span>.</li></ul>",
-     "debut": 35,
-     "fin": 42,
+     "debut": 30,
+     "fin": 35,
      "partie": null,
      "sections": [
       {
        "titre": "Études, métiers, langues, entourage",
-       "page": 35
+       "page": 30
       },
       {
        "titre": "Géographie : se situer",
-       "page": 37
+       "page": 31
       },
       {
        "titre": "Vie quotidienne",
-       "page": 40
+       "page": 33
       },
       {
        "titre": "Histoire : dates et vocabulaire",
-       "page": 41
+       "page": 34
       }
      ],
      "methodes": [
@@ -3441,8 +3437,8 @@ window.LC = {
      "objectifs": "",
      "prerequis": "",
      "essentiel": "",
-     "debut": 43,
-     "fin": 48,
+     "debut": 36,
+     "fin": 39,
      "partie": null,
      "sections": [],
      "methodes": [],
