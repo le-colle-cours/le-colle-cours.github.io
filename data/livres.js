@@ -1015,8 +1015,8 @@ window.LC = {
    "id": "be-logique-armoire",
    "matiere": "numerique",
    "titre": "BE de logique : l'armoire à vidéoprojecteurs",
-   "description": "Compte rendu des séances 1 et 2 : étapes, choix et obstacles rencontrés pour l'afficheur 7 segments (MA7) et le choix du vidéoprojecteur (MCV), puis ce qu'il faut pour la séance 3.",
-   "pages": 10,
+   "description": "Compte rendu illustré des séances 1 et 2 (MA7, MCV), préparation des séances 3 à 6 (MD20, MA20, MCC, chef d'orchestre) et brouillon de la fiche de synthèse.",
+   "pages": 21,
    "pdf": "docs/be-logique-armoire.pdf",
    "fiche": null,
    "chapitres": [
@@ -1068,26 +1068,95 @@ window.LC = {
     },
     {
      "n": 3,
-     "titre": "Pour la séance 3",
-     "intro": "La séance 3 porte sur le décompteur 20 s (MD20) et son afficheur (MA20), qui serviront deux fois, dans BGC et dans BGS. Avant d'y aller, il faut finir le MCV ; ensuite, presque tout ce qu'on a appris se réutilise.",
-     "objectifs": "",
-     "prerequis": "",
-     "essentiel": "<ul><li>Avant la séance 3 : porte <code>not</code> sur le reset, simulation et validation du MCV, <code>ma7.bdf</code> ajouté au projet.</li><li>Une seule horloge (50 MHz) ; le signal 1 Hz sert de validation, pas d'horloge.</li><li>MA20 réutilisera deux MA7 ; MD20 réutilisera <code>ENA</code> et <code>PRN</code>/<code>CLRN</code> pour charger 20.</li></ul>",
+     "titre": "Séance 3 : décompteur 20 s et afficheur (MD20, MA20)",
+     "intro": "Deux modules génériques, utilisés deux fois chacun (dans BGC et dans BGS) : un décompteur synchrone de 20 à 0 cadencé à la seconde, et un afficheur qui le montre sur deux chiffres. Ce chapitre est une <strong>préparation</strong> : les synthèses du TD sont faites et vérifiées, il reste à les implanter et à les tester.",
+     "objectifs": "<ul><li>Synthétiser un décompteur synchrone 20 → 0 avec des bascules D.</li><li>Gérer les entrées de forçage (retour à 20) et l'activation.</li><li>Synthétiser un décodeur binaire → BCD et l'associer à deux MA7.</li></ul>",
+     "prerequis": "Séances 1 et 2 ; comparateur et multiplexeur (<code>LPM_COMPARE</code>, <code>LPM_MUX</code>).",
+     "essentiel": "<ul><li>MD20 : 5 <code>dffe</code> sur 50 MHz, <code>ENA</code> = impulsion 1 s ; 20 → 0 puis reste à 0.</li><li>Forçage à $10100_2$ (<code>PRN</code> sur $Q_4,Q_2$) par $\\nb{\\texttt{RESET}}\\cdot\\texttt{ACTIF}$.</li><li><code>TIME_OUT</code> : 00000 décodé puis resynchronisé par une bascule D.</li><li>MA20 : unités par table, dizaines par comparateurs ($N&gt;9$, $N&gt;19$) et multiplexeur.</li></ul>",
      "debut": 10,
-     "fin": 10,
+     "fin": 13,
      "partie": null,
      "sections": [
       {
-       "titre": "À terminer avant",
+       "titre": "Le décompteur MD20",
        "page": 10
       },
       {
-       "titre": "Ce qu'on réutilise",
-       "page": 10
+       "titre": "Le décodeur binaire → BCD et MA20",
+       "page": 12
+      },
+      {
+       "titre": "Points de vigilance",
+       "page": 13
       }
      ],
      "methodes": [],
      "pdf": "docs/be-logique-armoire/chapitre-03.pdf"
+    },
+    {
+     "n": 4,
+     "titre": "Séance 4 : le contrôle du code (MCC, BGC)",
+     "intro": "Le bloc BGC laisse 20 s à l'utilisateur pour taper le code <strong>« 31 »</strong> avec les boutons. Il réutilise MD20 et MA20 ; le seul module nouveau est MCC, une machine d'états codée cette fois en binaire.",
+     "objectifs": "<ul><li>Traduire le cahier des charges du code en machine d'états.</li><li>La synthétiser avec des bascules D (codage binaire naturel).</li><li>Assembler et tester le bloc BGC complet.</li></ul>",
+     "prerequis": "Séances 2 et 3.",
+     "essentiel": "<ul><li>MCC : 5 états ($E_0$ attente, $E_1$ « 3 », $E_2$ attente, $E_3$ OK, $E_4$ erreur), codés en binaire sur 3 <code>dffe</code>.</li><li>Chaque appui mène à un état qui attend le relâchement : pas besoin de détecteur de front.</li><li>$D_1 = \\nb{Q_1}Q_0R + Q_1\\nb{Q_0}\\,\\nb{T_2}\\,\\nb{T_3} + Q_1Q_0$, etc. ; <code>CODE_OK</code> $=Q_1Q_0$.</li><li><code>ENA</code> = ACTIF ; reset sur les trois <code>CLRN</code>.</li><li>BGC = MCC + MD20 + MA20 ; sorties <code>CODE_OK</code> et <code>TIME_OUT</code>.</li></ul>",
+     "debut": 14,
+     "fin": 16,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Les étapes",
+       "page": 14
+      },
+      {
+       "titre": "Points de vigilance",
+       "page": 16
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-logique-armoire/chapitre-04.pdf"
+    },
+    {
+     "n": 5,
+     "titre": "Séances 5 et 6 : blocs complets et chef d'orchestre",
+     "intro": "On termine les blocs BGV (avec MPAV) et BGS (avec MCS), deux modules <em>fournis</em>, puis on conçoit le chef d'orchestre qui enchaîne les trois blocs, et on teste l'ensemble avec l'armoire virtuelle.",
+     "objectifs": "<ul><li>Intégrer MPAV et MCS, et tester BGV et BGS.</li><li>Concevoir le chef d'orchestre (machine 1 parmi $N$).</li><li>Assembler l'application et la tester sur l'armoire virtuelle.</li></ul>",
+     "prerequis": "Séances 1 à 4.",
+     "essentiel": "<ul><li>MPAV et MCS sont fournis : on les intègre et on fait leurs tests unitaires.</li><li>Convention : RESET actif à 1 au niveau des blocs, porte NON avant <code>PRN</code>/<code>CLRN</code> dans les modules.</li><li>Chef d'orchestre : 4 états 1 parmi N ; $E_1$ = reset général, $E_2$, $E_3$, $E_4$ = activation de BGV, BGC, BGS ; retour en $E_1$ sur les fins de temporisation.</li><li>Afficheurs : HEX0-1 pour BGV, HEX2-3 pour BGC, HEX4-5 pour BGS ; serrures et présences vers l'armoire.</li></ul>",
+     "debut": 17,
+     "fin": 19,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Les étapes",
+       "page": 17
+      },
+      {
+       "titre": "Points de vigilance",
+       "page": 19
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-logique-armoire/chapitre-05.pdf"
+    },
+    {
+     "n": 6,
+     "titre": "La fiche de synthèse",
+     "intro": "À la fin du projet, chaque binôme rend une fiche A4 recto verso au maximum. Ce chapitre en donne le plan imposé et un brouillon déjà rempli avec ce qui est fait ; les parties grisées sont à compléter en fin de projet.",
+     "objectifs": "<ul><li>Connaître les rubriques attendues.</li><li>Disposer d'un test unitaire complet déjà rédigé.</li><li>Préparer difficultés et amélioration au fil des séances.</li></ul>",
+     "prerequis": "Tout le carnet.",
+     "essentiel": "<ul><li>Une page A4 recto verso au maximum, sept rubriques imposées.</li><li>Le test unitaire détaille les entrées, les sorties, et chaque action avec son effet observé.</li><li>Noter difficultés et idées au fil des séances : c'est ce qui rend la fiche concrète.</li></ul>",
+     "debut": 20,
+     "fin": 21,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Le brouillon",
+       "page": 20
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-logique-armoire/chapitre-06.pdf"
     }
    ]
   },

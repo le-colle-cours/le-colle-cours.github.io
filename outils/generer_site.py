@@ -28,7 +28,7 @@ LIVRES = [
     (4, 'conception-systemes-logiques', 'numerique', 'Conception des systèmes logiques',
      "Algèbre de Boole, codage, logique CMOS, circuits combinatoires et séquentiels, mémoires et composants programmables, et le cours appliqué au BE (armoire à vidéoprojecteurs)."),
     (14, 'be-logique-armoire', 'numerique', "BE de logique : l'armoire à vidéoprojecteurs",
-     "Compte rendu des séances 1 et 2 : étapes, choix et obstacles rencontrés pour l'afficheur 7 segments (MA7) et le choix du vidéoprojecteur (MCV), puis ce qu'il faut pour la séance 3."),
+     "Compte rendu illustré des séances 1 et 2 (MA7, MCV), préparation des séances 3 à 6 (MD20, MA20, MCC, chef d'orchestre) et brouillon de la fiche de synthèse."),
     (10, 'architecture-assembleur', 'numerique', 'Architecture et programmation en assembleur',
      "Codage, architecture de Von Neumann, processeur EROS et micro-instructions, modes d'adressage, mémoire et décodage, interfaçage, interruptions."),
     (3, 'raffinage-algorithme', 'numerique', "Du raffinage à l'algorithme",
