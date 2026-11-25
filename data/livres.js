@@ -4,7 +4,7 @@ window.LC = {
   {
    "id": "electricite",
    "titre": "Électricité et électronique",
-   "description": "Circuits linéaires, mesure et puissance électrique."
+   "description": "Circuits linéaires, mesure et puissance électrique, travaux pratiques de courants faibles."
   },
   {
    "id": "numerique",
@@ -509,6 +509,331 @@ window.LC = {
       }
      ],
      "pdf": "docs/metrologie-circuits-puissance/chapitre-06.pdf"
+    }
+   ]
+  },
+  {
+   "id": "tp-courants-faibles",
+   "matiere": "electricite",
+   "titre": "TP de circuits (courants faibles) : consignes et préparations",
+   "description": "Consignes de la salle de TP et mode d'emploi des appareils (GBF, oscilloscope, multimètre), prise en main de PLECS et PSpice, puis pour chaque TP (simulation RLC, instrumentation et ordre 1, bobine réelle) : ce qu'il faut préparer, la théorie, les réglages et les résultats attendus chiffrés.",
+   "pages": 36,
+   "pdf": "docs/tp-courants-faibles.pdf",
+   "fiche": "docs/tp-courants-faibles/fiche-revision.pdf",
+   "chapitres": [
+    {
+     "n": 1,
+     "titre": "Consignes et matériel de la salle de TP",
+     "intro": "Les trois TP de circuits reposent sur les mêmes appareils et les mêmes règles de travail. Ce chapitre les regroupe : ce qu'on attend d'un étudiant en séance, puis le mode d'emploi de chaque appareil, avec les pièges qui font perdre du temps.",
+     "objectifs": "<ul><li>Savoir ce qui est attendu avant, pendant et après une séance.</li><li>Lire la valeur d'une résistance ; régler correctement le GBF.</li><li>Régler l'oscilloscope sans « autoscale » et faire des mesures fiables.</li><li>Utiliser le multimètre en voltmètre, ampèremètre et ohmmètre.</li></ul>",
+     "prerequis": "Aucun.",
+     "essentiel": "",
+     "debut": 5,
+     "fin": 8,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Déroulement d'un TP",
+       "page": 5
+      },
+      {
+       "titre": "Code des couleurs des résistances",
+       "page": 5
+      },
+      {
+       "titre": "Le générateur de fonctions (GBF)",
+       "page": 6
+      },
+      {
+       "titre": "L'oscilloscope",
+       "page": 7
+      },
+      {
+       "titre": "Le multimètre",
+       "page": 8
+      },
+      {
+       "titre": "La plaquette de câblage",
+       "page": 8
+      }
+     ],
+     "methodes": [
+      {
+       "num": "1.1",
+       "titre": "Avant, pendant et après une séance",
+       "page": 5
+      },
+      {
+       "num": "1.2",
+       "titre": "Mettre en route le GBF",
+       "page": 6
+      },
+      {
+       "num": "1.3",
+       "titre": "Régler l'oscilloscope sans autoscale",
+       "page": 7
+      },
+      {
+       "num": "1.4",
+       "titre": "Câbler et vérifier un montage",
+       "page": 8
+      }
+     ],
+     "pdf": "docs/tp-courants-faibles/chapitre-01.pdf"
+    },
+    {
+     "n": 2,
+     "titre": "Démarrer avec PLECS",
+     "intro": "PLECS est un simulateur de circuits pensé pour l'électronique de puissance, utilisé ici en version autonome (<em>standalone</em>). Son originalité : le circuit électrique et les blocs de mesure et d'affichage (oscilloscope, analyse fréquentielle) sont deux mondes séparés, reliés par des capteurs. Ce chapitre résume le document de prise en main, dont les parties 1 à 4 sont à faire avant le TP1.",
+     "objectifs": "<ul><li>Saisir un circuit et régler les composants.</li><li>Faire une simulation temporelle et afficher des signaux sur l'oscilloscope.</li><li>Appliquer un échelon, un signal carré ou sinusoïdal ; comparer plusieurs simulations.</li><li>Faire une analyse fréquentielle (AC Sweep) et obtenir un diagramme de Bode.</li></ul>",
+     "prerequis": "Chapitre 1.",
+     "essentiel": "",
+     "debut": 9,
+     "fin": 11,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Saisir un schéma",
+       "page": 9
+      },
+      {
+       "titre": "Simulation temporelle",
+       "page": 9
+      },
+      {
+       "titre": "Échelon, signal carré, sinusoïde",
+       "page": 10
+      },
+      {
+       "titre": "Analyse fréquentielle (AC Sweep)",
+       "page": 10
+      }
+     ],
+     "methodes": [
+      {
+       "num": "2.1",
+       "titre": "Saisir un circuit dans PLECS",
+       "page": 9
+      },
+      {
+       "num": "2.2",
+       "titre": "Simuler et visualiser une tension",
+       "page": 10
+      },
+      {
+       "num": "2.3",
+       "titre": "Tracer un diagramme de Bode dans PLECS",
+       "page": 11
+      }
+     ],
+     "pdf": "docs/tp-courants-faibles/chapitre-02.pdf"
+    },
+    {
+     "n": 3,
+     "titre": "Démarrer avec PSpice",
+     "intro": "OrCAD PSpice est le simulateur de référence en électronique. On dessine le schéma dans <em>Capture</em>, on définit un <em>profil de simulation</em>, puis on exploite les courbes dans la fenêtre <em>PSpice</em>. Le choix de la <em>source</em> dépend du type d'analyse : c'est l'erreur la plus fréquente des débutants.",
+     "objectifs": "<ul><li>Organiser un projet en schématiques.</li><li>Choisir les bonnes bibliothèques, sources et facteurs d'échelle.</li><li>Faire une analyse temporelle, fréquentielle, en continu, paramétrique et de Fourier.</li></ul>",
+     "prerequis": "Chapitre 1.",
+     "essentiel": "",
+     "debut": 12,
+     "fin": 15,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Projet et schématiques",
+       "page": 12
+      },
+      {
+       "titre": "Bibliothèques, masse et facteurs d'échelle",
+       "page": 12
+      },
+      {
+       "titre": "Les sources",
+       "page": 13
+      },
+      {
+       "titre": "Analyse temporelle (Time Domain)",
+       "page": 13
+      },
+      {
+       "titre": "Analyse fréquentielle (AC Sweep)",
+       "page": 14
+      },
+      {
+       "titre": "Analyses en continu, paramétrique et de Fourier",
+       "page": 14
+      }
+     ],
+     "methodes": [
+      {
+       "num": "3.1",
+       "titre": "Créer un projet PSpice",
+       "page": 12
+      },
+      {
+       "num": "3.2",
+       "titre": "Faire une analyse temporelle",
+       "page": 14
+      },
+      {
+       "num": "3.3",
+       "titre": "Tracer un diagramme de Bode dans PSpice",
+       "page": 14
+      },
+      {
+       "num": "3.4",
+       "titre": "Analyse paramétrique (plusieurs valeurs d'un composant)",
+       "page": 15
+      }
+     ],
+     "pdf": "docs/tp-courants-faibles/chapitre-03.pdf"
+    },
+    {
+     "n": 4,
+     "titre": "TP1 — Prise en main de PLECS et PSpice",
+     "intro": "Ce premier TP se fait entièrement en simulation. On y étudie le circuit RLC série sous deux angles : comme <em>filtre</em> passe-bas du second ordre (PLECS), puis comme <em>impédance</em> qui présente une résonance (PSpice). La partie « pour aller plus loin » explique pourquoi un oscilloscope perturbe une mesure et comment une sonde passive compensée corrige ce défaut.",
+     "objectifs": "<ul><li>Simuler un circuit quelconque : réponse temporelle, fréquentielle, analyse paramétrique.</li><li>Distinguer, pour un filtre d'ordre 2, la coupure à §I-3dB, la fréquence propre et la fréquence du maximum de gain.</li><li>Connaître les propriétés d'une impédance à la résonance.</li><li>Comprendre et régler une sonde passive compensée.</li></ul>",
+     "prerequis": "Chapitres 2 et 3 ; annexe du chapitre 7.",
+     "essentiel": "",
+     "debut": 16,
+     "fin": 24,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "À préparer : le RLC série en filtre passe-bas",
+       "page": 16
+      },
+      {
+       "titre": "Pendant la séance : simulations PLECS",
+       "page": 19
+      },
+      {
+       "titre": "PSpice : impédance du RLC série et résonance",
+       "page": 19
+      },
+      {
+       "titre": "Pour aller plus loin : impédance d'entrée d'un oscilloscope",
+       "page": 21
+      },
+      {
+       "titre": "Sonde passive : pont diviseur compensé",
+       "page": 22
+      },
+      {
+       "titre": "Bilan à savoir (réutilisé au TP3)",
+       "page": 23
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/tp-courants-faibles/chapitre-04.pdf"
+    },
+    {
+     "n": 5,
+     "titre": "TP2 — Instrumentation et circuits RC d'ordre 1",
+     "intro": "Ce TP fait passer de la simulation au banc de mesure. On apprend à se servir du multimètre, de l'alimentation, du GBF et de l'oscilloscope, puis on caractérise un circuit RC du premier ordre de deux façons : en fréquence (diagramme de Bode) et dans le temps (réponse à un échelon). La dernière partie relie le Bode au spectre des signaux.",
+     "objectifs": "<ul><li>Utiliser les appareils de la salle, sans « autoscale ».</li><li>Mesurer une fréquence de coupure à §I-3dB et un déphasage ; relever un diagramme de Bode.</li><li>Distinguer régime transitoire et régime permanent ; mesurer une constante de temps et un temps de montée.</li><li>Lire un Bode pour prévoir la réponse à un signal donné ; utiliser la FFT de l'oscilloscope.</li></ul>",
+     "prerequis": "Chapitre 1.",
+     "essentiel": "",
+     "debut": 25,
+     "fin": 29,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "À préparer : la théorie utile",
+       "page": 25
+      },
+      {
+       "titre": "Pendant la séance",
+       "page": 27
+      }
+     ],
+     "methodes": [
+      {
+       "num": "5.1",
+       "titre": "Relever le Bode d'un système d'ordre 1",
+       "page": 28
+      }
+     ],
+     "pdf": "docs/tp-courants-faibles/chapitre-05.pdf"
+    },
+    {
+     "n": 6,
+     "titre": "TP3 — Caractérisation d'une bobine réelle",
+     "intro": "Une bobine réelle n'est pas une inductance pure : son fil a une résistance $R_L$, et ses spires forment entre elles une petite capacité $C_L$. Ce TP réutilise les méthodes des TP1 et TP2 (résonance, réponse indicielle, Bode) pour <em>mesurer</em> $R_L$, $L$ et $C_L$, puis montre l'effet de $R_L$ sur un filtre passe-haut.",
+     "objectifs": "<ul><li>Choisir une méthode de mesure temporelle ou fréquentielle adaptée à la grandeur cherchée.</li><li>Mesurer $R_L$ (résonance, continu), $L$ (réponse indicielle) et $C_L$ (filtre réjecteur).</li><li>Expliquer les conséquences de la non-idéalité de la bobine sur un montage.</li></ul>",
+     "prerequis": "TP1 (résonance, second ordre) et TP2 (Bode, temps de montée) : chapitres 4 et 5.",
+     "essentiel": "",
+     "debut": 30,
+     "fin": 34,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "À préparer : la bobine réelle",
+       "page": 30
+      },
+      {
+       "titre": "Pendant la séance : mesurer RL",
+       "page": 31
+      },
+      {
+       "titre": "Pendant la séance : mesurer L",
+       "page": 32
+      },
+      {
+       "titre": "Pendant la séance : la bobine dans un filtre passe-haut",
+       "page": 33
+      },
+      {
+       "titre": "Pour aller plus loin : mesurer CL",
+       "page": 34
+      },
+      {
+       "titre": "Ce qui est évalué",
+       "page": 34
+      }
+     ],
+     "methodes": [
+      {
+       "num": "6.1",
+       "titre": "Mesurer $R_L$ à la résonance",
+       "page": 32
+      },
+      {
+       "num": "6.2",
+       "titre": "Mesurer $L$ par la réponse indicielle",
+       "page": 33
+      }
+     ],
+     "pdf": "docs/tp-courants-faibles/chapitre-06.pdf"
+    },
+    {
+     "n": 7,
+     "titre": "Annexe : fonctions de transfert du second ordre",
+     "intro": "Les quatre filtres du second ordre partagent le même dénominateur ; seul le numérateur change. Cette annexe donne les formes standards et les résultats à connaître pour caractériser un filtre à partir de ses mesures.",
+     "objectifs": "<ul><li>Reconnaître les formes standards passe-bas, passe-haut, passe-bande, coupe-bande.</li><li>Relier $m$ et $Q$ à l'allure du Bode : maximum, coupure, bande passante.</li></ul>",
+     "prerequis": "Diagrammes de Bode d'ordre 1.",
+     "essentiel": "",
+     "debut": 35,
+     "fin": 36,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Dénominateur commun",
+       "page": 35
+      },
+      {
+       "titre": "Les quatre filtres",
+       "page": 35
+      }
+     ],
+     "methodes": [
+      {
+       "num": "7.1",
+       "titre": "Caractériser un filtre du second ordre à partir de mesures",
+       "page": 36
+      }
+     ],
+     "pdf": "docs/tp-courants-faibles/chapitre-07.pdf"
     }
    ]
   },
@@ -1161,6 +1486,125 @@ window.LC = {
    ]
   },
   {
+   "id": "be-eros",
+   "matiere": "numerique",
+   "titre": "BE EROS : programmer un processeur en assembleur",
+   "description": "Carnet de bureau d'études : langage machine et assembleur, micro-instructions, modes d'adressage, premiers programmes, puis entrées/sorties et pilotage de PINGOO. Programmes vérifiés sur simulateur.",
+   "pages": 17,
+   "pdf": "docs/be-eros.pdf",
+   "fiche": null,
+   "chapitres": [
+    {
+     "n": 1,
+     "titre": "Ce qu'il faut savoir d'EROS",
+     "intro": "Avant le sujet, l'essentiel de la documentation fournie (structure, jeu d'instructions, UAL, application et panneau de contrôle), réduit à ce qui sert pendant le BE.",
+     "objectifs": "<ul><li>Lire et écrire le code d'une instruction.</li><li>Situer programme, données et entrées/sorties en mémoire.</li><li>Connaître le cycle de recherche d'une instruction.</li></ul>",
+     "prerequis": "Binaire et hexadécimal.",
+     "essentiel": "<ul><li>Instruction = 2 octets (CO 7 bits, SD, SA, SB 3 bits chacun) + 1 octet d'opérande éventuel ; 1<sup>er</sup> octet $=2\\,\\text{CO}+\\text{bit fort de SD}$.</li><li>Mémoire 00 à EF ; entrées/sorties F0 à FF : PINGOO en FA à FD, afficheur FE, boutons FF.</li><li>Recherche d'une instruction : 4 micro-instructions (T0 à T3), puis l'exécution à partir de T4.</li></ul>",
+     "debut": 3,
+     "fin": 5,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Le format des instructions",
+       "page": 3
+      },
+      {
+       "titre": "La mémoire et les entrées/sorties",
+       "page": 3
+      },
+      {
+       "titre": "Le cycle d'une instruction",
+       "page": 4
+      },
+      {
+       "titre": "Écrire un programme",
+       "page": 4
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-01.pdf"
+    },
+    {
+     "n": 2,
+     "titre": "Séance 1 : préparation",
+     "intro": "Deux exercices de traduction, dans les deux sens, entre le contenu de la mémoire et l'assembleur.",
+     "objectifs": "<ul><li>Décoder un contenu mémoire en instructions.</li><li>Coder des instructions en langage machine.</li></ul>",
+     "prerequis": "Chapitre 1.",
+     "essentiel": "<ul><li>Décoder : binaire, découpage 7 + 3 + 3 + 3, le CO dit s'il y a un 3<sup>e</sup> octet.</li><li>Ex. 1 : <code>move r0,#50 ; move r1,#05 ; add r2,r1,r0 ; move r3,r2 ; hlt</code>.</li><li>Ex. 2 : <code>08 40 C3 0E C8 02 18 C0 10 0B 01 00 A0 4C 00</code>.</li></ul>",
+     "debut": 6,
+     "fin": 7,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Les étapes",
+       "page": 6
+      },
+      {
+       "titre": "Pièges",
+       "page": 7
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-02.pdf"
+    },
+    {
+     "n": 3,
+     "titre": "Séance 1 : manipulation",
+     "intro": "On exécute le programme de l'exercice 2 en pas à pas, puis on étudie les adressages indirects et on écrit les premiers programmes avec des branchements.",
+     "objectifs": "<ul><li>Détailler les micro-instructions de chaque instruction.</li><li>Reconnaître les cinq modes d'adressage.</li><li>Écrire des boucles avec <code>bra</code>, <code>beq</code>, <code>bne</code>.</li></ul>",
+     "prerequis": "Chapitre 2.",
+     "essentiel": "<ul><li>Recherche T0 à T3 ; immédiat +2 micro-instructions ; absolu +3 ; registre +1.</li><li>Indirect : adresse dans un registre <code>(r0)</code> ; indexé : base + déplacement <code>r0(r1)</code>.</li><li>Boucles : un registre de comparaison et <code>beq</code>/<code>bne</code>, ou un indicateur et <code>bz</code>/<code>bnz</code>.</li></ul>",
+     "debut": 8,
+     "fin": 11,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Le séquencement des instructions",
+       "page": 8
+      },
+      {
+       "titre": "Les adressages indirects",
+       "page": 9
+      },
+      {
+       "titre": "Les premiers programmes",
+       "page": 9
+      },
+      {
+       "titre": "Pièges",
+       "page": 10
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-03.pdf"
+    },
+    {
+     "n": 4,
+     "titre": "Séance 2 : entrées/sorties et PINGOO",
+     "intro": "Le processeur pilote maintenant le monde extérieur : il lit les boutons et les capteurs, écrit sur l'afficheur et commande PINGOO, toujours par de simples lectures et écritures en mémoire.",
+     "objectifs": "<ul><li>Lire et écrire des entrées/sorties en mémoire.</li><li>Isoler un bit avec un masque.</li><li>Se synchroniser sur un événement (attente d'un front).</li></ul>",
+     "prerequis": "Chapitres 1 à 3.",
+     "essentiel": "<ul><li>Entrées/sorties = cases mémoire : <code>move r0,ff</code> lit les boutons, <code>move fe,r0</code> écrit l'afficheur.</li><li>Masque + <code>and</code> pour isoler un bit, puis <code>bz</code>/<code>bnz</code>.</li><li>Scrutation : la réactivité dépend de la durée de la boucle, donc de l'horloge.</li><li>Compter des événements : attendre le passage à 1 <em>puis</em> le retour à 0.</li><li>Tableau en mémoire : base + index avec <code>move rD,rA(rB)</code>.</li></ul>",
+     "debut": 12,
+     "fin": 17,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Les étapes",
+       "page": 12
+      },
+      {
+       "titre": "Pièges",
+       "page": 16
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-eros/chapitre-04.pdf"
+    }
+   ]
+  },
+  {
    "id": "architecture-assembleur",
    "matiere": "numerique",
    "titre": "Architecture et programmation en assembleur",
@@ -1504,125 +1948,6 @@ window.LC = {
      ],
      "methodes": [],
      "pdf": "docs/architecture-assembleur/chapitre-08.pdf"
-    }
-   ]
-  },
-  {
-   "id": "be-eros",
-   "matiere": "numerique",
-   "titre": "BE EROS : programmer un processeur en assembleur",
-   "description": "Carnet de bureau d'études : langage machine et assembleur, micro-instructions, modes d'adressage, premiers programmes, puis entrées/sorties et pilotage de PINGOO. Programmes vérifiés sur simulateur.",
-   "pages": 17,
-   "pdf": "docs/be-eros.pdf",
-   "fiche": null,
-   "chapitres": [
-    {
-     "n": 1,
-     "titre": "Ce qu'il faut savoir d'EROS",
-     "intro": "Avant le sujet, l'essentiel de la documentation fournie (structure, jeu d'instructions, UAL, application et panneau de contrôle), réduit à ce qui sert pendant le BE.",
-     "objectifs": "<ul><li>Lire et écrire le code d'une instruction.</li><li>Situer programme, données et entrées/sorties en mémoire.</li><li>Connaître le cycle de recherche d'une instruction.</li></ul>",
-     "prerequis": "Binaire et hexadécimal.",
-     "essentiel": "<ul><li>Instruction = 2 octets (CO 7 bits, SD, SA, SB 3 bits chacun) + 1 octet d'opérande éventuel ; 1<sup>er</sup> octet $=2\\,\\text{CO}+\\text{bit fort de SD}$.</li><li>Mémoire 00 à EF ; entrées/sorties F0 à FF : PINGOO en FA à FD, afficheur FE, boutons FF.</li><li>Recherche d'une instruction : 4 micro-instructions (T0 à T3), puis l'exécution à partir de T4.</li></ul>",
-     "debut": 3,
-     "fin": 5,
-     "partie": null,
-     "sections": [
-      {
-       "titre": "Le format des instructions",
-       "page": 3
-      },
-      {
-       "titre": "La mémoire et les entrées/sorties",
-       "page": 3
-      },
-      {
-       "titre": "Le cycle d'une instruction",
-       "page": 4
-      },
-      {
-       "titre": "Écrire un programme",
-       "page": 4
-      }
-     ],
-     "methodes": [],
-     "pdf": "docs/be-eros/chapitre-01.pdf"
-    },
-    {
-     "n": 2,
-     "titre": "Séance 1 : préparation",
-     "intro": "Deux exercices de traduction, dans les deux sens, entre le contenu de la mémoire et l'assembleur.",
-     "objectifs": "<ul><li>Décoder un contenu mémoire en instructions.</li><li>Coder des instructions en langage machine.</li></ul>",
-     "prerequis": "Chapitre 1.",
-     "essentiel": "<ul><li>Décoder : binaire, découpage 7 + 3 + 3 + 3, le CO dit s'il y a un 3<sup>e</sup> octet.</li><li>Ex. 1 : <code>move r0,#50 ; move r1,#05 ; add r2,r1,r0 ; move r3,r2 ; hlt</code>.</li><li>Ex. 2 : <code>08 40 C3 0E C8 02 18 C0 10 0B 01 00 A0 4C 00</code>.</li></ul>",
-     "debut": 6,
-     "fin": 7,
-     "partie": null,
-     "sections": [
-      {
-       "titre": "Les étapes",
-       "page": 6
-      },
-      {
-       "titre": "Pièges",
-       "page": 7
-      }
-     ],
-     "methodes": [],
-     "pdf": "docs/be-eros/chapitre-02.pdf"
-    },
-    {
-     "n": 3,
-     "titre": "Séance 1 : manipulation",
-     "intro": "On exécute le programme de l'exercice 2 en pas à pas, puis on étudie les adressages indirects et on écrit les premiers programmes avec des branchements.",
-     "objectifs": "<ul><li>Détailler les micro-instructions de chaque instruction.</li><li>Reconnaître les cinq modes d'adressage.</li><li>Écrire des boucles avec <code>bra</code>, <code>beq</code>, <code>bne</code>.</li></ul>",
-     "prerequis": "Chapitre 2.",
-     "essentiel": "<ul><li>Recherche T0 à T3 ; immédiat +2 micro-instructions ; absolu +3 ; registre +1.</li><li>Indirect : adresse dans un registre <code>(r0)</code> ; indexé : base + déplacement <code>r0(r1)</code>.</li><li>Boucles : un registre de comparaison et <code>beq</code>/<code>bne</code>, ou un indicateur et <code>bz</code>/<code>bnz</code>.</li></ul>",
-     "debut": 8,
-     "fin": 11,
-     "partie": null,
-     "sections": [
-      {
-       "titre": "Le séquencement des instructions",
-       "page": 8
-      },
-      {
-       "titre": "Les adressages indirects",
-       "page": 9
-      },
-      {
-       "titre": "Les premiers programmes",
-       "page": 9
-      },
-      {
-       "titre": "Pièges",
-       "page": 10
-      }
-     ],
-     "methodes": [],
-     "pdf": "docs/be-eros/chapitre-03.pdf"
-    },
-    {
-     "n": 4,
-     "titre": "Séance 2 : entrées/sorties et PINGOO",
-     "intro": "Le processeur pilote maintenant le monde extérieur : il lit les boutons et les capteurs, écrit sur l'afficheur et commande PINGOO, toujours par de simples lectures et écritures en mémoire.",
-     "objectifs": "<ul><li>Lire et écrire des entrées/sorties en mémoire.</li><li>Isoler un bit avec un masque.</li><li>Se synchroniser sur un événement (attente d'un front).</li></ul>",
-     "prerequis": "Chapitres 1 à 3.",
-     "essentiel": "<ul><li>Entrées/sorties = cases mémoire : <code>move r0,ff</code> lit les boutons, <code>move fe,r0</code> écrit l'afficheur.</li><li>Masque + <code>and</code> pour isoler un bit, puis <code>bz</code>/<code>bnz</code>.</li><li>Scrutation : la réactivité dépend de la durée de la boucle, donc de l'horloge.</li><li>Compter des événements : attendre le passage à 1 <em>puis</em> le retour à 0.</li><li>Tableau en mémoire : base + index avec <code>move rD,rA(rB)</code>.</li></ul>",
-     "debut": 12,
-     "fin": 17,
-     "partie": null,
-     "sections": [
-      {
-       "titre": "Les étapes",
-       "page": 12
-      },
-      {
-       "titre": "Pièges",
-       "page": 16
-      }
-     ],
-     "methodes": [],
-     "pdf": "docs/be-eros/chapitre-04.pdf"
     }
    ]
   },

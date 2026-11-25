@@ -14,7 +14,7 @@ FICHES = Path('/home/claude/fiches/out')
 SITE = Path(sys.argv[1] if len(sys.argv) > 1 else '/home/claude/site')
 
 MATIERES = [
-    ('electricite', 'Électricité et électronique', "Circuits linéaires, mesure et puissance électrique."),
+    ('electricite', 'Électricité et électronique', "Circuits linéaires, mesure et puissance électrique, travaux pratiques de courants faibles."),
     ('numerique', 'Numérique et informatique', "Logique, circuits numériques, architecture des processeurs et conception d'algorithmes."),
     ('physique', 'Physique', "Électromagnétisme, propagation dans les lignes et physique des matériaux."),
     ('maths', 'Mathématiques', "Intégration et analyse de Fourier, analyse complexe, probabilités."),
@@ -25,6 +25,8 @@ LIVRES = [
      "Signaux, dipôles, lois de Kirchhoff et théorèmes généraux, transformée de Laplace et fonctions de transfert, quadripôles."),
     (2, 'metrologie-circuits-puissance', 'electricite', 'Métrologie et circuits de puissance',
      "Unités et incertitudes, instruments et mesures électriques, puissance en monophasé et systèmes triphasés."),
+    (16, 'tp-courants-faibles', 'electricite', "TP de circuits (courants faibles) : consignes et préparations",
+     "Consignes de la salle de TP et mode d'emploi des appareils (GBF, oscilloscope, multimètre), prise en main de PLECS et PSpice, puis pour chaque TP (simulation RLC, instrumentation et ordre 1, bobine réelle) : ce qu'il faut préparer, la théorie, les réglages et les résultats attendus chiffrés."),
     (4, 'conception-systemes-logiques', 'numerique', 'Conception des systèmes logiques',
      "Algèbre de Boole, codage, logique CMOS, circuits combinatoires et séquentiels, mémoires et composants programmables, et le cours appliqué au BE (armoire à vidéoprojecteurs)."),
     (14, 'be-logique-armoire', 'numerique', "BE de logique : l'armoire à vidéoprojecteurs",
