@@ -1363,7 +1363,7 @@ window.LC = {
    "matiere": "numerique",
    "titre": "BE de logique : l'armoire à vidéoprojecteurs",
    "description": "Compte rendu illustré des séances 1 à 3 (MA7, MCV, MD20, MA20) avec étapes, choix et obstacles, préparation des séances 4 à 6 (MCC, chef d'orchestre) et brouillon de la fiche de synthèse.",
-   "pages": 25,
+   "pages": 26,
    "pdf": "docs/be-logique-armoire.pdf",
    "fiche": null,
    "chapitres": [
@@ -1396,9 +1396,9 @@ window.LC = {
      "intro": "Le deuxième module est le premier séquentiel : un compteur/décompteur de 1 à 6 piloté par deux boutons, dont le numéro s'affiche grâce au MA7. On l'a réalisé comme une machine à états avec des bascules D.",
      "objectifs": "<ul><li>KEY3 incrémente, KEY2 décrémente, KEY0 remet à 1, SW0 active le module.</li><li>Synthèse par machine à états codée 1 parmi $N$.</li><li>Assembler MCV et MA7 et tester sur la carte.</li></ul>",
      "prerequis": "Séance 1 ; bascule D, machine à états.",
-     "essentiel": "<ul><li>MCV : six bascules D, une par état ; $E_i^+=E_{i-1}P+E_{i+1}M+E_i\\,\\nb P\\,\\nb M$ ; sorties $S_0=E_1+E_3+E_5$, $S_1=E_2+E_3+E_6$, $S_2=E_4+E_5+E_6$.</li><li>Boutons via détecteur de front ; activation par <code>ENA</code> ; reset sur <code>PRN</code> de $E_1$ et <code>CLRN</code> des autres.</li><li>Pannes : espace dans un nom ; entrée non branchée = VCC ; reset via détecteur ; mauvaise horloge ; reset inversé.</li><li>Reste à faire : ajouter la porte <code>not</code>, vérifier, simuler et faire valider.</li></ul>",
+     "essentiel": "<ul><li>MCV : six bascules D, une par état ; $E_i^+=E_{i-1}P+E_{i+1}M+E_i\\,\\nb P\\,\\nb M$ ; sorties $S_0=E_1+E_3+E_5$, $S_1=E_2+E_3+E_6$, $S_2=E_4+E_5+E_6$.</li><li>Boutons via détecteur de front ; activation par <code>ENA</code> ; reset sur <code>PRN</code> de $E_1$ et <code>CLRN</code> des autres.</li><li>Version finale : NON du reset et détecteurs de front à l'intérieur du MCV, qui reçoit les boutons bruts.</li><li>Pannes : espace dans un nom ; entrée non branchée = VCC ; reset via détecteur ; mauvaise horloge ; reset inversé.</li><li>Reste à faire : simuler le module final et le faire valider.</li></ul>",
      "debut": 6,
-     "fin": 9,
+     "fin": 10,
      "partie": null,
      "sections": [
       {
@@ -1420,29 +1420,29 @@ window.LC = {
      "objectifs": "<ul><li>Synthétiser un décompteur synchrone 20 → 0 avec des bascules D.</li><li>Gérer le forçage à 20 (reset, bloc inactif) et l'activation.</li><li>Réaliser un décodeur binaire → BCD avec comparateurs, multiplexeur et constantes.</li></ul>",
      "prerequis": "Séances 1 et 2 ; <code>LPM_COMPARE</code>, <code>LPM_MUX</code>, <code>LPM_CONSTANT</code>.",
      "essentiel": "<ul><li>MD20 : 5 <code>dffe</code> sur 50 MHz, <code>ENA</code> = impulsion 1 s ; codage binaire : les Q sont le compteur.</li><li>Forçage à $10100_2$ (<code>PRN</code> sur $Q_4,Q_2$) par $\\nb{\\texttt{RESET}}\\cdot\\texttt{ACTIF}$.</li><li><code>TIME_OUT</code> : <code>nor5</code> des Q, resynchronisée par une <code>dff</code>.</li><li>BCD : unités en portes ($u_0=A_0$) ; dizaines = deux <code>lpm_compare</code> (sortie <code>agb</code> seule) sur la sélection d'un <code>LPM_MUX</code> alimenté par des <code>lpm_constant</code>.</li><li>Débogage : lire le compteur en binaire sur les LED, comparer bit à bit.</li><li>Reste à faire : bascule V (premier 20), tests 1 à 6, validation.</li></ul>",
-     "debut": 10,
-     "fin": 17,
+     "debut": 11,
+     "fin": 18,
      "partie": null,
      "sections": [
       {
        "titre": "Le décompteur MD20",
-       "page": 10
+       "page": 11
       },
       {
        "titre": "Le décodeur binaire → BCD et MA20",
-       "page": 13
+       "page": 14
       },
       {
        "titre": "Les obstacles",
-       "page": 15
-      },
-      {
-       "titre": "Les tests de la séance suivante",
        "page": 16
       },
       {
-       "titre": "Points de vigilance",
+       "titre": "Les tests de la séance suivante",
        "page": 17
+      },
+      {
+       "titre": "Points de vigilance",
+       "page": 18
       }
      ],
      "methodes": [],
@@ -1455,17 +1455,17 @@ window.LC = {
      "objectifs": "<ul><li>Traduire le cahier des charges du code en machine d'états.</li><li>La synthétiser avec des bascules D (codage binaire naturel).</li><li>Assembler et tester le bloc BGC complet.</li></ul>",
      "prerequis": "Séances 2 et 3.",
      "essentiel": "<ul><li>MCC : 5 états ($E_0$ attente, $E_1$ « 3 », $E_2$ attente, $E_3$ OK, $E_4$ erreur), codés en binaire sur 3 <code>dffe</code>.</li><li>Chaque appui mène à un état qui attend le relâchement : pas besoin de détecteur de front.</li><li>$D_1 = \\nb{Q_1}Q_0R + Q_1\\nb{Q_0}\\,\\nb{T_2}\\,\\nb{T_3} + Q_1Q_0$, etc. ; <code>CODE_OK</code> $=Q_1Q_0$.</li><li><code>ENA</code> = ACTIF ; reset sur les trois <code>CLRN</code>.</li><li>BGC = MCC + MD20 + MA20 ; sorties <code>CODE_OK</code> et <code>TIME_OUT</code>.</li></ul>",
-     "debut": 18,
-     "fin": 20,
+     "debut": 19,
+     "fin": 21,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 18
+       "page": 19
       },
       {
        "titre": "Points de vigilance",
-       "page": 20
+       "page": 21
       }
      ],
      "methodes": [],
@@ -1478,17 +1478,17 @@ window.LC = {
      "objectifs": "<ul><li>Intégrer MPAV et MCS, et tester BGV et BGS.</li><li>Concevoir le chef d'orchestre (machine 1 parmi $N$).</li><li>Assembler l'application et la tester sur l'armoire virtuelle.</li></ul>",
      "prerequis": "Séances 1 à 4.",
      "essentiel": "<ul><li>MPAV et MCS sont fournis : on les intègre et on fait leurs tests unitaires.</li><li>Convention : RESET actif à 1 au niveau des blocs, porte NON avant <code>PRN</code>/<code>CLRN</code> dans les modules.</li><li>Chef d'orchestre : 4 états 1 parmi N ; $E_1$ = reset général, $E_2$, $E_3$, $E_4$ = activation de BGV, BGC, BGS ; retour en $E_1$ sur les fins de temporisation.</li><li>Afficheurs : HEX0-1 pour BGV, HEX2-3 pour BGC, HEX4-5 pour BGS ; serrures et présences vers l'armoire.</li></ul>",
-     "debut": 21,
-     "fin": 23,
+     "debut": 22,
+     "fin": 24,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 21
+       "page": 22
       },
       {
        "titre": "Points de vigilance",
-       "page": 23
+       "page": 24
       }
      ],
      "methodes": [],
@@ -1501,13 +1501,13 @@ window.LC = {
      "objectifs": "<ul><li>Connaître les rubriques attendues.</li><li>Disposer d'un test unitaire complet déjà rédigé.</li><li>Préparer difficultés et amélioration au fil des séances.</li></ul>",
      "prerequis": "Tout le carnet.",
      "essentiel": "<ul><li>Une page A4 recto verso au maximum, sept rubriques imposées.</li><li>Le test unitaire détaille les entrées, les sorties, et chaque action avec son effet observé.</li><li>Noter difficultés et idées au fil des séances : c'est ce qui rend la fiche concrète.</li></ul>",
-     "debut": 24,
-     "fin": 25,
+     "debut": 25,
+     "fin": 26,
      "partie": null,
      "sections": [
       {
        "titre": "Le brouillon",
-       "page": 24
+       "page": 25
       }
      ],
      "methodes": [],
