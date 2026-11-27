@@ -1363,7 +1363,7 @@ window.LC = {
    "matiere": "numerique",
    "titre": "BE de logique : l'armoire à vidéoprojecteurs",
    "description": "Compte rendu illustré des séances 1 à 3 (MA7, MCV, MD20, MA20) avec étapes, choix et obstacles, préparation des séances 4 à 6 (MCC, chef d'orchestre) et brouillon de la fiche de synthèse.",
-   "pages": 24,
+   "pages": 25,
    "pdf": "docs/be-logique-armoire.pdf",
    "fiche": null,
    "chapitres": [
@@ -1421,7 +1421,7 @@ window.LC = {
      "prerequis": "Séances 1 et 2 ; <code>LPM_COMPARE</code>, <code>LPM_MUX</code>, <code>LPM_CONSTANT</code>.",
      "essentiel": "<ul><li>MD20 : 5 <code>dffe</code> sur 50 MHz, <code>ENA</code> = impulsion 1 s ; codage binaire : les Q sont le compteur.</li><li>Forçage à $10100_2$ (<code>PRN</code> sur $Q_4,Q_2$) par $\\nb{\\texttt{RESET}}\\cdot\\texttt{ACTIF}$.</li><li><code>TIME_OUT</code> : <code>nor5</code> des Q, resynchronisée par une <code>dff</code>.</li><li>BCD : unités en portes ($u_0=A_0$) ; dizaines = deux <code>lpm_compare</code> (sortie <code>agb</code> seule) sur la sélection d'un <code>LPM_MUX</code> alimenté par des <code>lpm_constant</code>.</li><li>Débogage : lire le compteur en binaire sur les LED, comparer bit à bit.</li><li>Reste à faire : bascule V (premier 20), tests 1 à 6, validation.</li></ul>",
      "debut": 10,
-     "fin": 16,
+     "fin": 17,
      "partie": null,
      "sections": [
       {
@@ -1434,7 +1434,7 @@ window.LC = {
       },
       {
        "titre": "Les obstacles",
-       "page": 14
+       "page": 15
       },
       {
        "titre": "Les tests de la séance suivante",
@@ -1442,7 +1442,7 @@ window.LC = {
       },
       {
        "titre": "Points de vigilance",
-       "page": 16
+       "page": 17
       }
      ],
      "methodes": [],
@@ -1455,17 +1455,17 @@ window.LC = {
      "objectifs": "<ul><li>Traduire le cahier des charges du code en machine d'états.</li><li>La synthétiser avec des bascules D (codage binaire naturel).</li><li>Assembler et tester le bloc BGC complet.</li></ul>",
      "prerequis": "Séances 2 et 3.",
      "essentiel": "<ul><li>MCC : 5 états ($E_0$ attente, $E_1$ « 3 », $E_2$ attente, $E_3$ OK, $E_4$ erreur), codés en binaire sur 3 <code>dffe</code>.</li><li>Chaque appui mène à un état qui attend le relâchement : pas besoin de détecteur de front.</li><li>$D_1 = \\nb{Q_1}Q_0R + Q_1\\nb{Q_0}\\,\\nb{T_2}\\,\\nb{T_3} + Q_1Q_0$, etc. ; <code>CODE_OK</code> $=Q_1Q_0$.</li><li><code>ENA</code> = ACTIF ; reset sur les trois <code>CLRN</code>.</li><li>BGC = MCC + MD20 + MA20 ; sorties <code>CODE_OK</code> et <code>TIME_OUT</code>.</li></ul>",
-     "debut": 17,
-     "fin": 19,
+     "debut": 18,
+     "fin": 20,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 17
+       "page": 18
       },
       {
        "titre": "Points de vigilance",
-       "page": 19
+       "page": 20
       }
      ],
      "methodes": [],
@@ -1478,17 +1478,17 @@ window.LC = {
      "objectifs": "<ul><li>Intégrer MPAV et MCS, et tester BGV et BGS.</li><li>Concevoir le chef d'orchestre (machine 1 parmi $N$).</li><li>Assembler l'application et la tester sur l'armoire virtuelle.</li></ul>",
      "prerequis": "Séances 1 à 4.",
      "essentiel": "<ul><li>MPAV et MCS sont fournis : on les intègre et on fait leurs tests unitaires.</li><li>Convention : RESET actif à 1 au niveau des blocs, porte NON avant <code>PRN</code>/<code>CLRN</code> dans les modules.</li><li>Chef d'orchestre : 4 états 1 parmi N ; $E_1$ = reset général, $E_2$, $E_3$, $E_4$ = activation de BGV, BGC, BGS ; retour en $E_1$ sur les fins de temporisation.</li><li>Afficheurs : HEX0-1 pour BGV, HEX2-3 pour BGC, HEX4-5 pour BGS ; serrures et présences vers l'armoire.</li></ul>",
-     "debut": 20,
-     "fin": 22,
+     "debut": 21,
+     "fin": 23,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 20
+       "page": 21
       },
       {
        "titre": "Points de vigilance",
-       "page": 22
+       "page": 23
       }
      ],
      "methodes": [],
@@ -1501,13 +1501,13 @@ window.LC = {
      "objectifs": "<ul><li>Connaître les rubriques attendues.</li><li>Disposer d'un test unitaire complet déjà rédigé.</li><li>Préparer difficultés et amélioration au fil des séances.</li></ul>",
      "prerequis": "Tout le carnet.",
      "essentiel": "<ul><li>Une page A4 recto verso au maximum, sept rubriques imposées.</li><li>Le test unitaire détaille les entrées, les sorties, et chaque action avec son effet observé.</li><li>Noter difficultés et idées au fil des séances : c'est ce qui rend la fiche concrète.</li></ul>",
-     "debut": 23,
-     "fin": 24,
+     "debut": 24,
+     "fin": 25,
      "partie": null,
      "sections": [
       {
        "titre": "Le brouillon",
-       "page": 23
+       "page": 24
       }
      ],
      "methodes": [],
