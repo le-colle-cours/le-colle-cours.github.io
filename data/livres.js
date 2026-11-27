@@ -1362,8 +1362,8 @@ window.LC = {
    "id": "be-logique-armoire",
    "matiere": "numerique",
    "titre": "BE de logique : l'armoire à vidéoprojecteurs",
-   "description": "Compte rendu illustré des séances 1 à 3 (MA7, MCV, MD20, MA20) avec étapes, choix et obstacles, préparation des séances 4 à 6 (MCC, chef d'orchestre) et brouillon de la fiche de synthèse.",
-   "pages": 26,
+   "description": "Compte rendu illustré des séances 1 à 3 (MA7, MCV, MD20, MA20), préparation détaillée des séances 4 à 6 (MCC, chef d'orchestre), fiche de synthèse et boîte à outils Quartus : composants, bus, constantes, bascules, compilation, recherche de pannes.",
+   "pages": 36,
    "pdf": "docs/be-logique-armoire.pdf",
    "fiche": null,
    "chapitres": [
@@ -1374,17 +1374,17 @@ window.LC = {
      "objectifs": "<ul><li>Afficher un chiffre de 0 à 9 donné sur 4 bits.</li><li>Segments 0 à 3 par équations, 4 à 6 par multiplexeurs (consigne).</li><li>Valider le module avec les interrupteurs de la carte.</li></ul>",
      "prerequis": "Tables de vérité, Karnaugh, multiplexeur.",
      "essentiel": "<ul><li>MA7 validé : chiffre 0 à 9 sur 4 bits, « E » pour 10 à 15, logique négative ($S_i=1$ : segment éteint).</li><li>$S_0$ à $S_3$ par Karnaugh ; $S_4$ à $S_6$ par multiplexeur 16 vers 1 ($D_k$ = valeur du segment pour $k$).</li><li>Leçons Quartus : gros point = liaison ; un bit = fil fin nommé <code>A[i]</code> ; un groupe = fil épais <code>A[3..0]</code>.</li></ul>",
-     "debut": 3,
-     "fin": 5,
+     "debut": 4,
+     "fin": 6,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 3
+       "page": 4
       },
       {
        "titre": "Les obstacles",
-       "page": 4
+       "page": 5
       }
      ],
      "methodes": [],
@@ -1397,17 +1397,17 @@ window.LC = {
      "objectifs": "<ul><li>KEY3 incrémente, KEY2 décrémente, KEY0 remet à 1, SW0 active le module.</li><li>Synthèse par machine à états codée 1 parmi $N$.</li><li>Assembler MCV et MA7 et tester sur la carte.</li></ul>",
      "prerequis": "Séance 1 ; bascule D, machine à états.",
      "essentiel": "<ul><li>MCV : six bascules D, une par état ; $E_i^+=E_{i-1}P+E_{i+1}M+E_i\\,\\nb P\\,\\nb M$ ; sorties $S_0=E_1+E_3+E_5$, $S_1=E_2+E_3+E_6$, $S_2=E_4+E_5+E_6$.</li><li>Boutons via détecteur de front ; activation par <code>ENA</code> ; reset sur <code>PRN</code> de $E_1$ et <code>CLRN</code> des autres.</li><li>Version finale : NON du reset et détecteurs de front à l'intérieur du MCV, qui reçoit les boutons bruts.</li><li>Pannes : espace dans un nom ; entrée non branchée = VCC ; reset via détecteur ; mauvaise horloge ; reset inversé.</li><li>Reste à faire : simuler le module final et le faire valider.</li></ul>",
-     "debut": 6,
-     "fin": 10,
+     "debut": 7,
+     "fin": 11,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 6
+       "page": 7
       },
       {
        "titre": "Les obstacles",
-       "page": 8
+       "page": 9
       }
      ],
      "methodes": [],
@@ -1419,30 +1419,30 @@ window.LC = {
      "intro": "Deux modules génériques, utilisés deux fois chacun (dans BGC et dans BGS) : un décompteur synchrone de 20 à 0 cadencé à la seconde, et un afficheur qui le montre sur deux chiffres. Les deux modules sont câblés et décomptent correctement sur la carte ; il reste un réglage (le « 20 » trop bref) et la série de tests de validation, prévus pour la séance suivante.",
      "objectifs": "<ul><li>Synthétiser un décompteur synchrone 20 → 0 avec des bascules D.</li><li>Gérer le forçage à 20 (reset, bloc inactif) et l'activation.</li><li>Réaliser un décodeur binaire → BCD avec comparateurs, multiplexeur et constantes.</li></ul>",
      "prerequis": "Séances 1 et 2 ; <code>LPM_COMPARE</code>, <code>LPM_MUX</code>, <code>LPM_CONSTANT</code>.",
-     "essentiel": "<ul><li>MD20 : 5 <code>dffe</code> sur 50 MHz, <code>ENA</code> = impulsion 1 s ; codage binaire : les Q sont le compteur.</li><li>Forçage à $10100_2$ (<code>PRN</code> sur $Q_4,Q_2$) par $\\nb{\\texttt{RESET}}\\cdot\\texttt{ACTIF}$.</li><li><code>TIME_OUT</code> : <code>nor5</code> des Q, resynchronisée par une <code>dff</code>.</li><li>BCD : unités en portes ($u_0=A_0$) ; dizaines = deux <code>lpm_compare</code> (sortie <code>agb</code> seule) sur la sélection d'un <code>LPM_MUX</code> alimenté par une seule <code>lpm_constant</code> de 16 bits.</li><li>Débogage : lire le compteur en binaire sur les LED, comparer bit à bit.</li><li>Constante du multiplexeur : $8720 = \\texttt{0010\\,0010\\,0001\\,0000}_2$ (data3 = 2 pour $N = 20$), et non 528.</li><li>Reste à faire : passer la constante à 8720, tests 1 à 6, validation.</li></ul>",
-     "debut": 11,
-     "fin": 18,
+     "essentiel": "<ul><li>MD20 : 5 <code>dffe</code> sur 50 MHz, <code>ENA</code> = impulsion 1 s ; codage binaire : les Q sont le compteur.</li><li>Forçage à $10100_2$ (<code>PRN</code> sur $Q_4,Q_2$) par $\\nb{\\texttt{RESET}}\\cdot\\texttt{ACTIF}$.</li><li><code>TIME_OUT</code> : NON-OU des Q (<code>nor6</code>, une entrée à <code>gnd</code>), resynchronisée par une <code>dff</code>.</li><li>BCD : unités en portes ($u_0=A_0$) ; dizaines = deux <code>lpm_compare</code> (sortie <code>agb</code> seule) sur la sélection d'un <code>LPM_MUX</code> alimenté par une seule <code>lpm_constant</code> de 16 bits.</li><li>Débogage : lire le compteur en binaire sur les LED, comparer bit à bit.</li><li>Constante du multiplexeur : $8720 = \\texttt{0010\\,0010\\,0001\\,0000}_2$ (data3 = 2 pour $N = 20$), et non 528.</li><li>Reste à faire : passer la constante à 8720, tests 1 à 6, validation.</li></ul>",
+     "debut": 12,
+     "fin": 19,
      "partie": null,
      "sections": [
       {
        "titre": "Le décompteur MD20",
-       "page": 11
+       "page": 12
       },
       {
        "titre": "Le décodeur binaire → BCD et MA20",
-       "page": 14
+       "page": 15
       },
       {
        "titre": "Les obstacles",
-       "page": 16
-      },
-      {
-       "titre": "Les tests de la séance suivante",
        "page": 17
       },
       {
-       "titre": "Points de vigilance",
+       "titre": "Les tests de la séance suivante",
        "page": 18
+      },
+      {
+       "titre": "Points de vigilance",
+       "page": 19
       }
      ],
      "methodes": [],
@@ -1455,17 +1455,17 @@ window.LC = {
      "objectifs": "<ul><li>Traduire le cahier des charges du code en machine d'états.</li><li>La synthétiser avec des bascules D (codage binaire naturel).</li><li>Assembler et tester le bloc BGC complet.</li></ul>",
      "prerequis": "Séances 2 et 3.",
      "essentiel": "<ul><li>MCC : 5 états ($E_0$ attente, $E_1$ « 3 », $E_2$ attente, $E_3$ OK, $E_4$ erreur), codés en binaire sur 3 <code>dffe</code>.</li><li>Chaque appui mène à un état qui attend le relâchement : pas besoin de détecteur de front.</li><li>$D_1 = \\nb{Q_1}Q_0R + Q_1\\nb{Q_0}\\,\\nb{T_2}\\,\\nb{T_3} + Q_1Q_0$, etc. ; <code>CODE_OK</code> $=Q_1Q_0$.</li><li><code>ENA</code> = ACTIF ; reset sur les trois <code>CLRN</code>.</li><li>BGC = MCC + MD20 + MA20 ; sorties <code>CODE_OK</code> et <code>TIME_OUT</code>.</li></ul>",
-     "debut": 19,
-     "fin": 21,
+     "debut": 20,
+     "fin": 23,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 19
+       "page": 20
       },
       {
        "titre": "Points de vigilance",
-       "page": 21
+       "page": 22
       }
      ],
      "methodes": [],
@@ -1478,17 +1478,17 @@ window.LC = {
      "objectifs": "<ul><li>Intégrer MPAV et MCS, et tester BGV et BGS.</li><li>Concevoir le chef d'orchestre (machine 1 parmi $N$).</li><li>Assembler l'application et la tester sur l'armoire virtuelle.</li></ul>",
      "prerequis": "Séances 1 à 4.",
      "essentiel": "<ul><li>MPAV et MCS sont fournis : on les intègre et on fait leurs tests unitaires.</li><li>Convention : RESET actif à 1 au niveau des blocs, porte NON avant <code>PRN</code>/<code>CLRN</code> dans les modules.</li><li>Chef d'orchestre : 4 états 1 parmi N ; $E_1$ = reset général, $E_2$, $E_3$, $E_4$ = activation de BGV, BGC, BGS ; retour en $E_1$ sur les fins de temporisation.</li><li>Afficheurs : HEX0-1 pour BGV, HEX2-3 pour BGC, HEX4-5 pour BGS ; serrures et présences vers l'armoire.</li></ul>",
-     "debut": 22,
-     "fin": 24,
+     "debut": 24,
+     "fin": 27,
      "partie": null,
      "sections": [
       {
        "titre": "Les étapes",
-       "page": 22
+       "page": 24
       },
       {
        "titre": "Points de vigilance",
-       "page": 24
+       "page": 26
       }
      ],
      "methodes": [],
@@ -1501,17 +1501,60 @@ window.LC = {
      "objectifs": "<ul><li>Connaître les rubriques attendues.</li><li>Disposer d'un test unitaire complet déjà rédigé.</li><li>Préparer difficultés et amélioration au fil des séances.</li></ul>",
      "prerequis": "Tout le carnet.",
      "essentiel": "<ul><li>Une page A4 recto verso au maximum, sept rubriques imposées.</li><li>Le test unitaire détaille les entrées, les sorties, et chaque action avec son effet observé.</li><li>Noter difficultés et idées au fil des séances : c'est ce qui rend la fiche concrète.</li></ul>",
-     "debut": 25,
-     "fin": 26,
+     "debut": 28,
+     "fin": 29,
      "partie": null,
      "sections": [
       {
        "titre": "Le brouillon",
-       "page": 25
+       "page": 28
       }
      ],
      "methodes": [],
      "pdf": "docs/be-logique-armoire/chapitre-06.pdf"
+    },
+    {
+     "n": 7,
+     "titre": "La boîte à outils Quartus",
+     "intro": "Ce chapitre rassemble, sous forme de fiches, tout ce qu'il faut savoir <em>faire</em> dans Quartus pour réaliser les modules du BE sans aide : insérer et régler chaque composant, nommer fils et bus, fabriquer des constantes, câbler les bascules, compiler, programmer, puis trouver une panne. Chaque fiche répond à une question qui s'est réellement posée pendant les séances ; les chapitres suivants y renvoient.",
+     "objectifs": "<ul><li>Savoir quel composant prendre et comment le régler.</li><li>Câbler sans erreur de nom, de largeur ou de polarité.</li><li>Diagnostiquer seul une panne sur la carte.</li></ul>",
+     "prerequis": "Aucun.",
+     "essentiel": "<ul><li>Un module : <code>.bdf</code>, symbole (à régénérer après chaque changement d'E/S), <em>Update Symbol</em> dans la page principale.</li><li>Fil fin = un bit <code>A[i]</code> ; bus épais = <code>A[n..0]</code> ; même nom = même fil ; un fil, un nom ; un nom, une source ; entrée non branchée = 1.</li><li>Portes de 2, 3, 4, 6, 8, 12 entrées ; <code>lpm_constant</code> (décimal), <code>lpm_compare</code> (une sortie), <code>lpm_mux</code> (données bout à bout, entrée 0 en poids faible).</li><li>Bascules : CLK = <code>clock50</code>, événements sur <code>ENA</code>, forçage par <code>PRN</code>/<code>CLRN</code> actifs à 0.</li><li>Panne : bon <code>.sof</code>, warnings, LED en binaire, comparaison bit à bit.</li></ul>",
+     "debut": 30,
+     "fin": 36,
+     "partie": null,
+     "sections": [
+      {
+       "titre": "Fiche 1 : créer un module et l'utiliser",
+       "page": 30
+      },
+      {
+       "titre": "Fiche 2 : les composants utilisés et leurs réglages",
+       "page": 30
+      },
+      {
+       "titre": "Fiche 3 : fils, bus et noms",
+       "page": 31
+      },
+      {
+       "titre": "Fiche 4 : constantes, comparateurs, multiplexeurs",
+       "page": 32
+      },
+      {
+       "titre": "Fiche 5 : bascules, horloge, forçage",
+       "page": 33
+      },
+      {
+       "titre": "Fiche 6 : la carte, compiler, programmer",
+       "page": 34
+      },
+      {
+       "titre": "Fiche 7 : trouver une panne",
+       "page": 35
+      }
+     ],
+     "methodes": [],
+     "pdf": "docs/be-logique-armoire/chapitre-07.pdf"
     }
    ]
   },
