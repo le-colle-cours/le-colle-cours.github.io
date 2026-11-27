@@ -34,7 +34,7 @@ LIVRES = [
     ('4c', 'fonctions-logiques', 'numerique', 'Fonctions logiques',
      "Conception des systèmes logiques, partie III : logique CMOS, circuits combinatoires, bascules et registres, compteurs, mémoires, composants programmables, et le cours appliqué au BE (armoire à vidéoprojecteurs)."),
     (14, 'be-logique-armoire', 'numerique', "BE de logique : l'armoire à vidéoprojecteurs",
-     "Compte rendu illustré des séances 1 et 2 (MA7, MCV), préparation des séances 3 à 6 (MD20, MA20, MCC, chef d'orchestre) et brouillon de la fiche de synthèse."),
+     "Compte rendu illustré des séances 1 à 3 (MA7, MCV, MD20, MA20) avec étapes, choix et obstacles, préparation des séances 4 à 6 (MCC, chef d'orchestre) et brouillon de la fiche de synthèse."),
     (15, 'be-eros', 'numerique', "BE EROS : programmer un processeur en assembleur",
      "Carnet de bureau d'études : langage machine et assembleur, micro-instructions, modes d'adressage, premiers programmes, puis entrées/sorties et pilotage de PINGOO. Programmes vérifiés sur simulateur."),
     (10, 'architecture-assembleur', 'numerique', 'Architecture et programmation en assembleur',
